@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Chrome on 我的工作记录</title>
+        <link>https://52haowu.cn/tags/chrome/</link>
+        <description>Recent content in Chrome on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/tags/chrome/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Chrome 命令行大全</title>
+        <link>https://52haowu.cn/p/chrome_switches/</link>
+        <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/chrome_switches/</guid>
+        <description>&lt;h1 id=&#34;介绍&#34;&gt;介绍
+&lt;/h1&gt;&lt;p&gt;Chrome（包括 WebKit 版的 Edge）是支持通过命令行进行控制的，可以以此来改变浏览器的行为，或进行调试等等。&lt;/p&gt;
+&lt;p&gt;比方说可以通过 &lt;code&gt;--user-data-dir&lt;/code&gt; 命令行，通过自定义用户数据目录，创建多个独立空间的浏览器。&lt;/p&gt;
+&lt;h1 id=&#34;例子&#34;&gt;例子
+&lt;/h1&gt;&lt;p&gt;下方示例用于创建 4 个独立空间的浏览器，每个浏览器的插件、用户、历史数据、书签等都是独立存在的。&lt;/p&gt;
+&lt;p&gt;如果想要经常这么使用，你可以通过创建快捷方式方便使用。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chrome.exe &amp;#34;--user-data-dir=用户自定义数据路径1&amp;#34;
+chrome.exe &amp;#34;--user-data-dir=用户自定义数据路径2&amp;#34;
+chrome.exe &amp;#34;--user-data-dir=用户自定义数据路径3&amp;#34;
+chrome.exe &amp;#34;--user-data-dir=用户自定义数据路径4&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;更多的开关&#34;&gt;更多的开关
+&lt;/h1&gt;&lt;p&gt;上边只是其中的一个例子，还有很多命令可使用，下方链接有汇总，有兴趣可查看。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://peter.sh/experiments/chromium-command-line-switches/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://peter.sh/experiments/chromium-command-line-switches/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

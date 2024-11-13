@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>JavaScript on 我的工作记录</title>
+        <link>https://52haowu.cn/tags/javascript/</link>
+        <description>Recent content in JavaScript on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>前端 Zip 压缩库</title>
+        <link>https://52haowu.cn/p/zip_js/</link>
+        <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/zip_js/</guid>
+        <description>&lt;h1 id=&#34;介绍&#34;&gt;介绍
+&lt;/h1&gt;&lt;p&gt;Zip.js 是一个前端库，用于压缩和解压 zip 文件，运行于浏览器和 Deno。&lt;/p&gt;
+&lt;p&gt;开源协议友好，适合使用。&lt;/p&gt;
+&lt;h1 id=&#34;功能特性&#34;&gt;功能特性
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;支持 Zip64 格式&lt;/li&gt;
+&lt;li&gt;支持 WinZIP AES 和 PKWare ZipCrypto 加密技术&lt;/li&gt;
+&lt;li&gt;支持对一个或多个 Zip 文件的同时读和写&lt;/li&gt;
+&lt;li&gt;支持 Worker&lt;/li&gt;
+&lt;li&gt;无依赖性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;兼容性&#34;&gt;兼容性
+&lt;/h1&gt;&lt;p&gt;该库完全适用于最新版本的 Chrome、Firefox、Safari 和 Microsoft Edge。&lt;/p&gt;
+&lt;h1 id=&#34;官网&#34;&gt;官网
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gildas-lormeau.github.io/zip.js/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;访问&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

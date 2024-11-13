@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tools on 我的工作记录</title>
+        <link>https://52haowu.cn/tags/tools/</link>
+        <description>Recent content in Tools on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 29 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/tags/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>PC 微信多开工具</title>
+        <link>https://52haowu.cn/p/pc-wechat-multi-run/</link>
+        <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/pc-wechat-multi-run/</guid>
+        <description>&lt;p&gt;PC 微信本身是不允许多开的，但是却有多开的方法。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;方法是：第一步，退出当前的微信；第二步，快速连续多次启动微信。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个人工操作还是有点难度，但是用脚本就简单多了。脚本代码如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo 请先退出微信 PC 客户端，再执行该程序！
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;start &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Program Files (x86)\Tencent\WeChat\WeChat.exe&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;start &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Program Files (x86)\Tencent\WeChat\WeChat.exe&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;保存脚本步骤：新建一个 .txt，把以上代码保存到 .txt 里边，然后把 .txt 修改为 .bat，双击就可以启动了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;代码执行流程：1，杀掉微信的进程；2，连续启动两次微信。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何三开乃至更多开？把 &lt;strong&gt;start&lt;/strong&gt; 这行代码多复制几行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注意：因为会杀进程，所以在使用脚本之前，你要先保证微信里边没有正在编辑的内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Git on 我的工作记录</title>
+        <link>https://52haowu.cn/tags/git/</link>
+        <description>Recent content in Git on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>git 远端仓库全量备份</title>
+        <link>https://52haowu.cn/p/git-remote-backup/</link>
+        <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/git-remote-backup/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;该文章源于 Stack Overflow：&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/a/23924942&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fully backup a git repo? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有时候需要对仓库进行备份，特别是 git 远端如果是部署在内网的话，进行全量备份非常有必要。&lt;/p&gt;
+&lt;h1 id=&#34;操作一共有两步&#34;&gt;操作一共有两步
+&lt;/h1&gt;&lt;h3 id=&#34;1镜像克隆-git-远端仓库全量&#34;&gt;1️⃣镜像克隆 git 远端仓库（全量）
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/docs/git-clone/zh_HANS-CN#git-clone---mirror&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git - git-clone Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;包括远程跟踪分支、标签等&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone --mirror 远端仓库地址.git
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;2更新镜像仓库&#34;&gt;2️⃣更新镜像仓库
+&lt;/h3&gt;&lt;p&gt;cd 进入仓库目录&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;即使未来有新增分支，也一样能更新下来，并且被删除的分支不会从镜像中被删除&lt;/p&gt;
+&lt;h1 id=&#34;扩展打包为单个文件&#34;&gt;扩展：打包为单个文件
+&lt;/h1&gt;&lt;p&gt;依然需要 cd 进入仓库目录&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git bundle create 仓库名.bundle --all
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>给 GitHub Desktop 加上右键菜单</title>
+        <link>https://52haowu.cn/p/github_desktop_contextmenu/</link>
+        <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/github_desktop_contextmenu/</guid>
+        <description>&lt;p&gt;GitHub Desktop 是一款操作简单，界面很好看的客户端。&lt;/p&gt;
+&lt;p&gt;我为它添加了目录背景右键的功能，当鼠标在文件夹空白处右键，点击 GitHub Desktop，即可快速打开并定位到相关仓库（或添加仓库）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/github-desktop-contextmenu/001.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;启用&#34;&gt;启用
+&lt;/h1&gt;&lt;p&gt;将下方内容，&lt;code&gt;你的用户名&lt;/code&gt; 改成你电脑的用户名，保存为 &lt;code&gt;.reg&lt;/code&gt; 文件，双击导入注册表，立刻生效。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\GitHubDesktop]
+&amp;#34;Icon&amp;#34;=&amp;#34;C:\\Users\\%USERNAME%\\AppData\\Local\\GitHubDesktop\\GitHubDesktop.exe,0&amp;#34;
+@=&amp;#34;GitHub Desktop&amp;#34;
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\GitHubDesktop\command]
+@=&amp;#34;C:\\Users\\你的用户名\\AppData\\Local\\GitHubDesktop\\bin\\github.bat \&amp;#34;%V\&amp;#34;&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;停用&#34;&gt;停用
+&lt;/h1&gt;&lt;p&gt;将下方内容，保存为 &lt;code&gt;.reg&lt;/code&gt; 文件，双击导入注册表，立刻失效。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\GitHubDesktop]
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

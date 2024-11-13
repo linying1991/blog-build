@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ruby on 我的工作记录</title>
+        <link>https://52haowu.cn/categories/ruby/</link>
+        <description>Recent content in Ruby on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 04 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/categories/ruby/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ruby2.2 DevKit 安装后无法使用解决方案</title>
+        <link>https://52haowu.cn/p/ruby-devkit-install-failed/</link>
+        <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/ruby-devkit-install-failed/</guid>
+        <description>&lt;p&gt;windows 系统下，Ruby 的某些 gem 包需要 DevKit 才能正常安装，2.4 以后的版本可以一键安装 DevKit，之前的版本只能手动安装。&lt;/p&gt;
+&lt;p&gt;2.4 以后的可以到官网下载：&lt;a class=&#34;link&#34; href=&#34;https://rubyinstaller.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://rubyinstaller.org/downloads/&lt;/a&gt; 下载 &lt;strong&gt;WITH DEVKIT&lt;/strong&gt; 的版本即可。&lt;/p&gt;
+&lt;p&gt;我遇到安装后找不到 make 的情况，上网搜索后尝试的解决方案。&lt;/p&gt;
+&lt;p&gt;参考地址：&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/zxktxj/archive/2013/01/04/2843556.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cnblogs.com/zxktxj/archive/2013/01/04/2843556.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根据博文尝试后，在我这主要就是检查 devkit.rb 和 operating_system.rb 这两个文件里边的文件夹路径。&lt;/p&gt;
+&lt;p&gt;C:\Ruby22-x64\lib\ruby\site_ruby\devkit.rb&lt;/p&gt;
+&lt;p&gt;C:\Ruby22-x64\lib\ruby\2.2.0\rubygems\defaults\operating_system.rb&lt;/p&gt;
+&lt;p&gt;比如我的电脑上的 devkit.rb，有很明显的文件夹路径对不上：&amp;lsquo;D:\Program Files\DevKit\mingw\bin&amp;rsquo;，我的 DevKit 安装的位置压根就不是在这里。&lt;/p&gt;
+&lt;p&gt;可能是因为我系统里边的环境变量混乱导致的，把文件夹路径改对保存即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# enable RubyInstaller DevKit usage as a vendorable helper library&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;unless&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PATH&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;].&lt;/span&gt;include?(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;D:\\Program Files\\DevKit\\mingw\\bin&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  phrase &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Temporarily enhancing PATH to include DevKit...&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; defined?(&lt;span style=&#34;color:#66d9ef&#34;&gt;Gem&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;Gem&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ui&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;say(phrase) &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Gem&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;configuration&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;verbose
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    puts phrase
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  puts &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Prepending ENV[&amp;#39;PATH&amp;#39;] to include DevKit...&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; $DEBUG
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PATH&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;D:\\Program Files\\DevKit\\bin;D:\\Program Files\\DevKit\\mingw\\bin;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PATH&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;RI_DEVKIT&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;D:\\Program Files\\DevKit&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;CC&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gcc&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;CXX&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;g++&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;CPP&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;cpp&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;就这样解决了，一般情况下，如果 DevKit 正确安装但仍然不能用，那么上面这种方式就可以试试。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>RubyGem 下载失败的解决方法</title>
+        <link>https://52haowu.cn/p/ruby-gem-download-failed/</link>
+        <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/ruby-gem-download-failed/</guid>
+        <description>&lt;p&gt;RubyGem 下载 gem 包失败，有一定原因是 https 导致的。&lt;/p&gt;
+&lt;p&gt;搜索了很久，找到一个解决的方法。&lt;/p&gt;
+&lt;p&gt;1、下载 cacert.pem，也就是 curl 的证书。
+&lt;a class=&#34;link&#34; href=&#34;http://curl.haxx.se/ca/cacert.pem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://curl.haxx.se/ca/cacert.pem&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OpenSSL 使用 &lt;em&gt;PEM&lt;/em&gt; 文件格式存储证书和密钥。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2、放到指定版本 ruby 目录里边，我这里使用的是 2.2 的版本
+C:\Ruby22-x64\lib\ruby\2.2.0\rubygems\ssl_certs\&lt;/p&gt;
+&lt;p&gt;3、现在可以再试试&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="HTTP 头字段大全，来自维基百科，可以按 Ctrl + F 快速查询。">
+<title>HTTP 头字段大全</title>
+
+<link rel='canonical' href='https://52haowu.cn/p/http-headers/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="HTTP 头字段大全">
+<meta property='og:description' content="HTTP 头字段大全，来自维基百科，可以按 Ctrl + F 快速查询。">
+<meta property='og:url' content='https://52haowu.cn/p/http-headers/'>
+<meta property='og:site_name' content='我的工作记录'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='http' /><meta property='article:tag' content='headers' /><meta property='article:published_time' content='2021-09-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-09-05T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="HTTP 头字段大全">
+<meta name="twitter:description" content="HTTP 头字段大全，来自维基百科，可以按 Ctrl + F 快速查询。">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/avatar_hu16793669153682517761.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😊</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">我的工作记录</a></h1>
+            <h2 class="site-description">擅长 SketchUp 建模研究与插件开发、Golang、Ruby、C#、前端、项目管理、软件架构、Windows 开发等</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tools/" >
+                Tools
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/http-headers/">HTTP 头字段大全</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            HTTP 头字段大全，来自维基百科，可以按 Ctrl &#43; F 快速查询。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2021-09-05</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 3 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>下方表格内容来自维基百科：<a class="link" href="https://zh.wikipedia.org/zh/HTTP%e5%a4%b4%e5%ad%97%e6%ae%b5"  target="_blank" rel="noopener"
+    >HTTP头字段</a></p>
+<p>MDN 的也不错，也顺便贴上来：<a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers"  target="_blank" rel="noopener"
+    >HTTP Headers</a></p>
+</blockquote>
+<h2 id="请求字段">请求字段
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>协议头字段名</th>
+          <th>说明</th>
+          <th>示例</th>
+          <th>状态</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Accept</td>
+          <td>能够接受的回应内容类型（Content-Types）。参见内容协商。</td>
+          <td>Accept: text/plain</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Accept-Charset</td>
+          <td>能够接受的字符集</td>
+          <td>Accept-Charset: utf-8</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Accept-Encoding</td>
+          <td>能够接受的编码方式列表。参考HTTP压缩。</td>
+          <td>Accept-Encoding: gzip, deflate</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Accept-Language</td>
+          <td>能够接受的回应内容的自然语言列表。参考 内容协商 。</td>
+          <td>Accept-Language: en-US</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Accept-Datetime</td>
+          <td>能够接受的按照时间来表示的版本</td>
+          <td>Accept-Datetime: Thu, 31 May 2007 20:35:00 GMT</td>
+          <td>临时</td>
+      </tr>
+      <tr>
+          <td>Authorization</td>
+          <td>用于超文本传输协议的认证的认证信息</td>
+          <td>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Cache-Control</td>
+          <td>用来指定在这次的请求/响应链中的所有缓存机制 都必须 遵守的指令</td>
+          <td>Cache-Control: no-cache</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Connection</td>
+          <td>该浏览器想要优先使用的连接类型</td>
+          <td>Connection: keep-alive; Connection: Upgrade</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Cookie</td>
+          <td>之前由服务器通过 Set- Cookie （下文详述）发送的一个 超文本传输协议Cookie</td>
+          <td>Cookie: $Version=1; Skin=new;</td>
+          <td>常设: 标准</td>
+      </tr>
+      <tr>
+          <td>Content-Length</td>
+          <td>以 八位字节数组 （8位的字节）表示的请求体的长度</td>
+          <td>Content-Length: 348</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Content-MD5</td>
+          <td>请求体的内容的二进制 MD5 散列值，以 Base64 编码的结果</td>
+          <td>Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==</td>
+          <td>过时的</td>
+      </tr>
+      <tr>
+          <td>Content-Type</td>
+          <td>请求体的 多媒体类型 （用于POST和PUT请求中）</td>
+          <td>Content-Type: application/x-www-form-urlencoded</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Date</td>
+          <td>发送该消息的日期和时间(按照 RFC 7231 中定义的&quot;超文本传输协议日期&quot;格式来发送)</td>
+          <td>Date: Tue, 15 Nov 1994 08:12:31 GMT</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Expect</td>
+          <td>表明客户端要求服务器做出特定的行为</td>
+          <td>Expect: 100-continue</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>From</td>
+          <td>发起此请求的用户的邮件地址</td>
+          <td>From: <a class="link" href="mailto:user@example.com" >user@example.com</a></td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Host</td>
+          <td>服务器的域名(用于虚拟主机 )，以及服务器所监听的传输控制协议端口号。如果所请求的端口是对应的服务的标准端口，则端口号可被省略。自超文件传输协议版本1.1（HTTP/1.1）开始便是必需字段。</td>
+          <td>Host: zh.wikipedia.org:80; Host: zh.wikipedia.org</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>If-Match</td>
+          <td>仅当客户端提供的实体与服务器上对应的实体相匹配时，才进行对应的操作。主要作用时，用作像 PUT 这样的方法中，仅当从用户上次更新某个资源以来，该资源未被修改的情况下，才更新该资源。</td>
+          <td>If-Match: &ldquo;737060cd8c284d8af7ad3082f209582d&rdquo;</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>If-Modified-Since</td>
+          <td>允许在对应的内容未被修改的情况下返回304未修改（ 304 Not Modified ）</td>
+          <td>If-Modified-Since: Sat, 29 Oct 1994 19:43:31 GMT</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>If-None-Match</td>
+          <td>允许在对应的内容未被修改的情况下返回304未修改（ 304 Not Modified ），参考 超文本传输协议 的实体标记</td>
+          <td>If-None-Match: &ldquo;737060cd8c284d8af7ad3082f209582d&rdquo;</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>If-Range</td>
+          <td>如果该实体未被修改过，则向我发送我所缺少的那一个或多个部分；否则，发送整个新的实体</td>
+          <td>If-Range: &ldquo;737060cd8c284d8af7ad3082f209582d&rdquo;</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>If-Unmodified-Since</td>
+          <td>仅当该实体自某个特定时间已来未被修改的情况下，才发送回应。</td>
+          <td>If-Unmodified-Since: Sat, 29 Oct 1994 19:43:31 GMT</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Max-Forwards</td>
+          <td>限制该消息可被代理及网关转发的次数。</td>
+          <td>Max-Forwards: 10</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Origin</td>
+          <td>发起一个针对 跨来源资源共享 的请求（要求服务器在回应中加入一个‘访问控制-允许来源’（&lsquo;Access-Control-Allow-Origin&rsquo;）字段）。</td>
+          <td>Origin: <a class="link" href="http://www.example-social-network.com"  target="_blank" rel="noopener"
+    >http://www.example-social-network.com</a></td>
+          <td>常设: 标准</td>
+      </tr>
+      <tr>
+          <td>Pragma</td>
+          <td>与具体的实现相关，这些字段可能在请求/回应链中的任何时候产生多种效果。</td>
+          <td>Pragma: no-cache</td>
+          <td>常设但不常用</td>
+      </tr>
+      <tr>
+          <td>Proxy-Authorization</td>
+          <td>用来向代理进行认证的认证信息。</td>
+          <td>Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Range</td>
+          <td>仅请求某个实体的一部分。字节偏移以0开始。参见字节服务。</td>
+          <td>Range: bytes=500-999</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Referer</td>
+          <td>表示浏览器所访问的前一个页面，正是那个页面上的某个链接将浏览器带到了当前所请求的这个页面。</td>
+          <td>Referer: <a class="link" href="http://zh.wikipedia.org/wiki/Main_Page"  target="_blank" rel="noopener"
+    >http://zh.wikipedia.org/wiki/Main_Page</a></td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>TE</td>
+          <td>浏览器预期接受的传输编码方式：可使用回应协议头 Transfer-Encoding 字段中的值；另外还可用&quot;trailers&quot;（与&quot;分块 &ldquo;传输方式相关）这个值来表明浏览器希望在最后一个尺寸为0的块之后还接收到一些额外的字段。</td>
+          <td>TE: trailers, deflate</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>User-Agent</td>
+          <td>浏览器的浏览器身份标识字符串</td>
+          <td>User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/21.0</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Upgrade</td>
+          <td>要求服务器升级到另一个协议。</td>
+          <td>Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Via</td>
+          <td>向服务器告知，这个请求是由哪些代理发出的。</td>
+          <td>Via: 1.0 fred, 1.1 example.com (Apache/1.1)</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Warning</td>
+          <td>一个一般性的警告，告知，在实体内容体中可能存在错误。</td>
+          <td>Warning: 199 Miscellaneous warning</td>
+          <td>常设</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="响应字段">响应字段
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>字段名</th>
+          <th>说明</th>
+          <th>例子</th>
+          <th>状态</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Access-Control-Allow-Origin</td>
+          <td>指定哪些网站可参与到跨来源资源共享过程中</td>
+          <td>Access-Control-Allow-Origin: *</td>
+          <td>临时</td>
+      </tr>
+      <tr>
+          <td>Accept-Patch</td>
+          <td>指定服务器支持的文件格式类型。</td>
+          <td>Accept-Patch: text/example;charset=utf-8</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Accept-Ranges</td>
+          <td>这个服务器支持哪些种类的部分内容范围</td>
+          <td>Accept-Ranges: bytes</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Age</td>
+          <td>这个对象在代理缓存中存在的时间，以秒为单位</td>
+          <td>Age: 12</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Allow</td>
+          <td>对于特定资源有效的动作。针对HTTP/405这一错误代码而使用</td>
+          <td>Allow: GET, HEAD</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Cache-Control</td>
+          <td>向从服务器直到客户端在内的所有缓存机制告知，它们是否可以缓存这个对象。其单位为秒</td>
+          <td>Cache-Control: max-age=3600</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Connection</td>
+          <td>针对该连接所预期的选项</td>
+          <td>Connection: close</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Content-Disposition</td>
+          <td>一个可以让客户端下载文件并建议文件名的头部。文件名需要用双引号包裹。</td>
+          <td>Content-Disposition: attachment; filename=&ldquo;fname.ext&rdquo;</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Content-Encoding</td>
+          <td>在数据上使用的编码类型。参考 超文本传输协议压缩 。</td>
+          <td>Content-Encoding: gzip</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Content-Language</td>
+          <td>内容所使用的语言</td>
+          <td>Content-Language: da</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Content-Length</td>
+          <td>回应消息体的长度，以 字节 （8位为一字节）为单位</td>
+          <td>Content-Length: 348</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Content-Location</td>
+          <td>所返回的数据的一个候选位置</td>
+          <td>Content-Location: /index.htm</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Content-MD5</td>
+          <td>回应内容的二进制 MD5 散列，以 Base64 方式编码</td>
+          <td>Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==</td>
+          <td>过时的</td>
+      </tr>
+      <tr>
+          <td>Content-Range</td>
+          <td>这条部分消息是属于某条完整消息的哪个部分</td>
+          <td>Content-Range: bytes 21010-47021/47022</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Content-Type</td>
+          <td>当前内容的MIME类型</td>
+          <td>Content-Type: text/html; charset=utf-8</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Date</td>
+          <td>此条消息被发送时的日期和时间(按照 RFC 7231 中定义的“超文本传输协议日期”格式来表示)</td>
+          <td>Date: Tue, 15 Nov 1994 08:12:31 GMT</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>ETag</td>
+          <td>对于某个资源的某个特定版本的一个标识符，通常是一个 消息散列</td>
+          <td>ETag: &ldquo;737060cd8c284d8af7ad3082f209582d&rdquo;</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Expires</td>
+          <td>指定一个日期/时间，超过该时间则认为此回应已经过期</td>
+          <td>Expires: Thu, 01 Dec 1994 16:00:00 GMT</td>
+          <td>常设: 标准</td>
+      </tr>
+      <tr>
+          <td>Last-Modified</td>
+          <td>所请求的对象的最后修改日期(按照 RFC 7231 中定义的“超文本传输协议日期”格式来表示)</td>
+          <td>Last-Modified: Tue, 15 Nov 1994 12:45:26 GMT</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Link</td>
+          <td>用来表达与另一个资源之间的类型关系，此处所说的类型关系是在 RFC 5988 中定义的</td>
+          <td>Link: <!-- raw HTML omitted -->; rel=&ldquo;alternate&rdquo;</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Location</td>
+          <td>用来 进行重定向，或者在创建了某个新资源时使用。</td>
+          <td>Location: <a class="link" href="http://www.w3.org/pub/WWW/People.html"  target="_blank" rel="noopener"
+    >http://www.w3.org/pub/WWW/People.html</a></td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>P3P</td>
+          <td>用于支持设置P3P策略，标准格式为“P3P:CP=&ldquo;your_compact_policy&rdquo;”。然而P3P规范并不成功，大部分现代浏览器没有完整实现该功能，而大量网站也将该值设为假值，从而足以用来欺骗浏览器的P3P插件功能并授权给第三方Cookies。</td>
+          <td>P3P: CP=&ldquo;This is not a P3P policy! See <a class="link" href="http://www.google.com/support/accounts/bin/answer.py?hl=en&amp;answer=151657"  target="_blank" rel="noopener"
+    >http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657</a> for more info.&rdquo;</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Pragma</td>
+          <td>与具体的实现相关，这些字段可能在请求/回应链中的任何时候产生多种效果。</td>
+          <td>Pragma: no-cache</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Proxy-Authenticate</td>
+          <td>要求在访问代理时提供身份认证信息。</td>
+          <td>Proxy-Authenticate: Basic</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Public-Key-Pins</td>
+          <td>用于缓解中间人攻击，声明网站认证使用的传输层安全协议证书的散列值</td>
+          <td>Public-Key-Pins: max-age=2592000; pin-sha256=&ldquo;E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g=&rdquo;;</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Refresh</td>
+          <td>用于设定可定时的重定向跳转。右边例子设定了5秒后跳转至“http://www.w3.org/pub/WWW/People.html”。</td>
+          <td>Refresh: 5; url=http://www.w3.org/pub/WWW/People.html</td>
+          <td>专利并非标准</td>
+      </tr>
+      <tr>
+          <td>Retry-After</td>
+          <td>如果某个实体临时不可用，则，此协议头用来告知客户端日后重试。其值可以是一个特定的时间段(以秒为单位)或一个超文本传输协议日期。</td>
+          <td>Example 1: Retry-After: 120; Example 2: Retry-After: Fri, 07 Nov 2014 23:59:59 GMT</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Server</td>
+          <td>服务器的名字</td>
+          <td>Server: Apache/2.4.1 (Unix)</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Set-Cookie</td>
+          <td>HTTP cookie</td>
+          <td>Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1</td>
+          <td>常设: 标准</td>
+      </tr>
+      <tr>
+          <td>Status</td>
+          <td>通用网关接口 协议头字段，用来说明当前这个超文本传输协议回应的 状态 。普通的超文本传输协议回应，会使用单独的“状态行”（&ldquo;Status-Line&rdquo;）作为替代，这一点是在 RFC 7230 中定义的。</td>
+          <td>Status: 200 OK</td>
+          <td>Not listed as a registered field name（页面存档备份，存于互联网档案馆）</td>
+      </tr>
+      <tr>
+          <td>Strict-Transport-Security</td>
+          <td>HTTP 严格传输安全这一头部告知客户端缓存这一强制 HTTPS 策略的时间，以及这一策略是否适用于其子域名。</td>
+          <td>Strict-Transport-Security: max-age=16070400; includeSubDomains</td>
+          <td>常设: 标准</td>
+      </tr>
+      <tr>
+          <td>Trailer</td>
+          <td>这个头部数值指示了在这一系列头部信息由由分块传输编码编码。</td>
+          <td>Trailer: Max-Forwards</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Transfer-Encoding</td>
+          <td>用来将实体安全地传输给用户的编码形式。当前定义的方法包括：分块（chunked）、compress、deflate、gzip和identity。</td>
+          <td>Transfer-Encoding: chunked</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Upgrade</td>
+          <td>要求客户端升级到另一个协议。</td>
+          <td>Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Vary</td>
+          <td>告知下游的代理服务器，应当如何对未来的请求协议头进行匹配，以决定是否可使用已缓存的回应内容而不是重新从原始服务器请求新的内容。</td>
+          <td>Vary: *</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Via</td>
+          <td>告知代理服务器的客户端，当前回应是通过什么途径发送的。</td>
+          <td>Via: 1.0 fred, 1.1 example.com (Apache/1.1)</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>Warning</td>
+          <td>一般性的警告，告知在实体内容体中可能存在错误。</td>
+          <td>Warning: 199 Miscellaneous warning</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>WWW-Authenticate</td>
+          <td>表明在请求获取这个实体时应当使用的认证模式。</td>
+          <td>WWW-Authenticate: Basic</td>
+          <td>常设</td>
+      </tr>
+      <tr>
+          <td>X-Frame-Options</td>
+          <td>点击劫持保护：deny：该页面不允许在 frame 中展示，即使是同域名内。sameorigin：该页面允许同域名内在 frame 中展示。allow-from uri：该页面允许在指定uri的 frame 中展示。allowall：允许任意位置的frame显示，非标准值。</td>
+          <td>X-Frame-Options: deny</td>
+          <td>过时的</td>
+      </tr>
+  </tbody>
+</table></div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/http/">Http</a>
+        
+            <a href="/tags/headers/">Headers</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>转载请联系我</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/http-status-code/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HTTP 响应代码大全</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 我的工作记录
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

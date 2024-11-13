@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Xcopy on 我的工作记录</title>
+        <link>https://52haowu.cn/tags/xcopy/</link>
+        <description>Recent content in Xcopy on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/tags/xcopy/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xcopy 命令的常用开关</title>
+        <link>https://52haowu.cn/p/xcopy/</link>
+        <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/xcopy/</guid>
+        <description>&lt;h1 id=&#34;说明&#34;&gt;说明
+&lt;/h1&gt;&lt;p&gt;xcopy 用于复制文件和目录树（即递归复制），配合自带的开关，功能强大。&lt;/p&gt;
+&lt;p&gt;平时主要是配置自动化的时候用，也就是用得并不多，但是作用却很大。&lt;/p&gt;
+&lt;p&gt;因此就很容易忘记命令和开关的作用以及目标结果，这里开一篇文章，把经常使用的列进来，作为一个记录，随时可搜索查看。&lt;/p&gt;
+&lt;h1 id=&#34;开关说明&#34;&gt;开关说明
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;例子中，目标地址我都采用目录，其实文件也是可以的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;开关-i如果目标不存在且要复制多个文件则假定目标必须是目录&#34;&gt;开关 /I：如果目标不存在，且要复制多个文件，则假定目标必须是目录。
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /I 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;开关-e复制目录和子目录包括空目录即克隆整个目录不包括隐藏和系统文件如果需要加上-h&#34;&gt;开关 /E：复制目录和子目录，包括空目录。（即克隆整个目录，不包括隐藏和系统文件，如果需要，加上 /H）
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /I /E 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;开关-y如果目标文件存在自动覆盖&#34;&gt;开关 /Y：如果目标文件存在，自动覆盖。
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /Y 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;开关-q复制时不显示文件名复制完毕后仅显示复制了多少个文件&#34;&gt;开关 /Q：复制时不显示文件名。（复制完毕后仅显示复制了多少个文件）
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /Q 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;更多开关可通过下方命令进行查看&#34;&gt;更多开关可通过下方命令进行查看
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /?
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;使用例子&#34;&gt;使用例子
+&lt;/h1&gt;&lt;p&gt;将源目录里边的文件（不含当前目录），复制到目标目录（自动创建目录，支持创建多级目录），并且&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;包括子文件&lt;/li&gt;
+&lt;li&gt;自动覆盖&lt;/li&gt;
+&lt;li&gt;不显示复制的路径&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /I /E /Y /Q 源目录 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

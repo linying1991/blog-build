@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Gem on 我的工作记录</title>
+        <link>https://52haowu.cn/categories/gem/</link>
+        <description>Recent content in Gem on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/categories/gem/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>RubyGem 下载失败的解决方法</title>
+        <link>https://52haowu.cn/p/ruby-gem-download-failed/</link>
+        <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/ruby-gem-download-failed/</guid>
+        <description>&lt;p&gt;RubyGem 下载 gem 包失败，有一定原因是 https 导致的。&lt;/p&gt;
+&lt;p&gt;搜索了很久，找到一个解决的方法。&lt;/p&gt;
+&lt;p&gt;1、下载 cacert.pem，也就是 curl 的证书。
+&lt;a class=&#34;link&#34; href=&#34;http://curl.haxx.se/ca/cacert.pem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://curl.haxx.se/ca/cacert.pem&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OpenSSL 使用 &lt;em&gt;PEM&lt;/em&gt; 文件格式存储证书和密钥。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2、放到指定版本 ruby 目录里边，我这里使用的是 2.2 的版本
+C:\Ruby22-x64\lib\ruby\2.2.0\rubygems\ssl_certs\&lt;/p&gt;
+&lt;p&gt;3、现在可以再试试&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

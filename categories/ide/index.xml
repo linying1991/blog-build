@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>IDE on 我的工作记录</title>
+        <link>https://52haowu.cn/categories/ide/</link>
+        <description>Recent content in IDE on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/categories/ide/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>JetBrains 迷你地图插件 CodeGlance</title>
+        <link>https://52haowu.cn/p/jetbrains-minimap-plugin/</link>
+        <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/jetbrains-minimap-plugin/</guid>
+        <description>&lt;p&gt;JetBrains 本身不带迷你地图功能，但可以通过插件的形式来实现。&lt;/p&gt;
+&lt;p&gt;直接在 Settings 里边搜索 CodeGlance，安装后重启 IDE 就有了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/jetbrains-minimap-plugin/001.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/jetbrains-minimap-plugin/002.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

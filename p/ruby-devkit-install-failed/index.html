@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="windows 系统下，Ruby 的某些 gem 包需要 DevKit 才能正常安装，2.4 以后的版本可以一键安装 DevKit，之前的版本只能手动安装。\n2.4 以后的可以到官网下载：https://rubyinstaller.org/downloads/ 下载 WITH DEVKIT 的版本即可。\n我遇到安装后找不到 make 的情况，上网搜索后尝试的解决方案。\n参考地址：https://www.cnblogs.com/zxktxj/archive/2013/01/04/2843556.html\n根据博文尝试后，在我这主要就是检查 devkit.rb 和 operating_system.rb 这两个文件里边的文件夹路径。\nC:\\Ruby22-x64\\lib\\ruby\\site_ruby\\devkit.rb\nC:\\Ruby22-x64\\lib\\ruby\\2.2.0\\rubygems\\defaults\\operating_system.rb\n比如我的电脑上的 devkit.rb，有很明显的文件夹路径对不上：&lsquo;D:\\Program Files\\DevKit\\mingw\\bin&rsquo;，我的 DevKit 安装的位置压根就不是在这里。\n可能是因为我系统里边的环境变量混乱导致的，把文件夹路径改对保存即可\n# enable RubyInstaller DevKit usage as a vendorable helper library unless ENV[&#39;PATH&#39;].include?(&#39;D:\\\\Program Files\\\\DevKit\\\\mingw\\\\bin&#39;) then phrase = &#39;Temporarily enhancing PATH to include DevKit...&#39; if defined?(Gem) Gem.ui.say(phrase) if Gem.configuration.verbose else puts phrase end puts &#34;Prepending ENV[&#39;PATH&#39;] to include DevKit...&#34; if $DEBUG ENV[&#39;PATH&#39;] = &#39;D:\\\\Program Files\\\\DevKit\\\\bin;D:\\\\Program Files\\\\DevKit\\\\mingw\\\\bin;&#39; + ENV[&#39;PATH&#39;] end ENV[&#39;RI_DEVKIT&#39;] = &#39;D:\\\\Program Files\\\\DevKit&#39; ENV[&#39;CC&#39;] = &#39;gcc&#39; ENV[&#39;CXX&#39;] = &#39;g++&#39; ENV[&#39;CPP&#39;] = &#39;cpp&#39; 就这样解决了，一般情况下，如果 DevKit 正确安装但仍然不能用，那么上面这种方式就可以试试。\n">
+<title>ruby2.2 DevKit 安装后无法使用解决方案</title>
+
+<link rel='canonical' href='https://52haowu.cn/p/ruby-devkit-install-failed/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="ruby2.2 DevKit 安装后无法使用解决方案">
+<meta property='og:description' content="windows 系统下，Ruby 的某些 gem 包需要 DevKit 才能正常安装，2.4 以后的版本可以一键安装 DevKit，之前的版本只能手动安装。\n2.4 以后的可以到官网下载：https://rubyinstaller.org/downloads/ 下载 WITH DEVKIT 的版本即可。\n我遇到安装后找不到 make 的情况，上网搜索后尝试的解决方案。\n参考地址：https://www.cnblogs.com/zxktxj/archive/2013/01/04/2843556.html\n根据博文尝试后，在我这主要就是检查 devkit.rb 和 operating_system.rb 这两个文件里边的文件夹路径。\nC:\\Ruby22-x64\\lib\\ruby\\site_ruby\\devkit.rb\nC:\\Ruby22-x64\\lib\\ruby\\2.2.0\\rubygems\\defaults\\operating_system.rb\n比如我的电脑上的 devkit.rb，有很明显的文件夹路径对不上：&lsquo;D:\\Program Files\\DevKit\\mingw\\bin&rsquo;，我的 DevKit 安装的位置压根就不是在这里。\n可能是因为我系统里边的环境变量混乱导致的，把文件夹路径改对保存即可\n# enable RubyInstaller DevKit usage as a vendorable helper library unless ENV[&#39;PATH&#39;].include?(&#39;D:\\\\Program Files\\\\DevKit\\\\mingw\\\\bin&#39;) then phrase = &#39;Temporarily enhancing PATH to include DevKit...&#39; if defined?(Gem) Gem.ui.say(phrase) if Gem.configuration.verbose else puts phrase end puts &#34;Prepending ENV[&#39;PATH&#39;] to include DevKit...&#34; if $DEBUG ENV[&#39;PATH&#39;] = &#39;D:\\\\Program Files\\\\DevKit\\\\bin;D:\\\\Program Files\\\\DevKit\\\\mingw\\\\bin;&#39; + ENV[&#39;PATH&#39;] end ENV[&#39;RI_DEVKIT&#39;] = &#39;D:\\\\Program Files\\\\DevKit&#39; ENV[&#39;CC&#39;] = &#39;gcc&#39; ENV[&#39;CXX&#39;] = &#39;g++&#39; ENV[&#39;CPP&#39;] = &#39;cpp&#39; 就这样解决了，一般情况下，如果 DevKit 正确安装但仍然不能用，那么上面这种方式就可以试试。\n">
+<meta property='og:url' content='https://52haowu.cn/p/ruby-devkit-install-failed/'>
+<meta property='og:site_name' content='我的工作记录'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ruby' /><meta property='article:published_time' content='2019-12-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-12-04T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="ruby2.2 DevKit 安装后无法使用解决方案">
+<meta name="twitter:description" content="windows 系统下，Ruby 的某些 gem 包需要 DevKit 才能正常安装，2.4 以后的版本可以一键安装 DevKit，之前的版本只能手动安装。\n2.4 以后的可以到官网下载：https://rubyinstaller.org/downloads/ 下载 WITH DEVKIT 的版本即可。\n我遇到安装后找不到 make 的情况，上网搜索后尝试的解决方案。\n参考地址：https://www.cnblogs.com/zxktxj/archive/2013/01/04/2843556.html\n根据博文尝试后，在我这主要就是检查 devkit.rb 和 operating_system.rb 这两个文件里边的文件夹路径。\nC:\\Ruby22-x64\\lib\\ruby\\site_ruby\\devkit.rb\nC:\\Ruby22-x64\\lib\\ruby\\2.2.0\\rubygems\\defaults\\operating_system.rb\n比如我的电脑上的 devkit.rb，有很明显的文件夹路径对不上：&lsquo;D:\\Program Files\\DevKit\\mingw\\bin&rsquo;，我的 DevKit 安装的位置压根就不是在这里。\n可能是因为我系统里边的环境变量混乱导致的，把文件夹路径改对保存即可\n# enable RubyInstaller DevKit usage as a vendorable helper library unless ENV[&#39;PATH&#39;].include?(&#39;D:\\\\Program Files\\\\DevKit\\\\mingw\\\\bin&#39;) then phrase = &#39;Temporarily enhancing PATH to include DevKit...&#39; if defined?(Gem) Gem.ui.say(phrase) if Gem.configuration.verbose else puts phrase end puts &#34;Prepending ENV[&#39;PATH&#39;] to include DevKit...&#34; if $DEBUG ENV[&#39;PATH&#39;] = &#39;D:\\\\Program Files\\\\DevKit\\\\bin;D:\\\\Program Files\\\\DevKit\\\\mingw\\\\bin;&#39; + ENV[&#39;PATH&#39;] end ENV[&#39;RI_DEVKIT&#39;] = &#39;D:\\\\Program Files\\\\DevKit&#39; ENV[&#39;CC&#39;] = &#39;gcc&#39; ENV[&#39;CXX&#39;] = &#39;g++&#39; ENV[&#39;CPP&#39;] = &#39;cpp&#39; 就这样解决了，一般情况下，如果 DevKit 正确安装但仍然不能用，那么上面这种方式就可以试试。\n">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/avatar_hu16793669153682517761.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😊</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">我的工作记录</a></h1>
+            <h2 class="site-description">擅长 SketchUp 建模研究与插件开发、Golang、Ruby、C#、前端、项目管理、软件架构、Windows 开发等</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ruby/" >
+                Ruby
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/ruby-devkit-install-failed/">ruby2.2 DevKit 安装后无法使用解决方案</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2019-12-04</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>windows 系统下，Ruby 的某些 gem 包需要 DevKit 才能正常安装，2.4 以后的版本可以一键安装 DevKit，之前的版本只能手动安装。</p>
+<p>2.4 以后的可以到官网下载：<a class="link" href="https://rubyinstaller.org/downloads/"  target="_blank" rel="noopener"
+    >https://rubyinstaller.org/downloads/</a> 下载 <strong>WITH DEVKIT</strong> 的版本即可。</p>
+<p>我遇到安装后找不到 make 的情况，上网搜索后尝试的解决方案。</p>
+<p>参考地址：<a class="link" href="https://www.cnblogs.com/zxktxj/archive/2013/01/04/2843556.html"  target="_blank" rel="noopener"
+    >https://www.cnblogs.com/zxktxj/archive/2013/01/04/2843556.html</a></p>
+<p>根据博文尝试后，在我这主要就是检查 devkit.rb 和 operating_system.rb 这两个文件里边的文件夹路径。</p>
+<p>C:\Ruby22-x64\lib\ruby\site_ruby\devkit.rb</p>
+<p>C:\Ruby22-x64\lib\ruby\2.2.0\rubygems\defaults\operating_system.rb</p>
+<p>比如我的电脑上的 devkit.rb，有很明显的文件夹路径对不上：&lsquo;D:\Program Files\DevKit\mingw\bin&rsquo;，我的 DevKit 安装的位置压根就不是在这里。</p>
+<p>可能是因为我系统里边的环境变量混乱导致的，把文件夹路径改对保存即可</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># enable RubyInstaller DevKit usage as a vendorable helper library</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">unless</span> <span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;PATH&#39;</span><span style="color:#f92672">].</span>include?(<span style="color:#e6db74">&#39;D:\\Program Files\\DevKit\\mingw\\bin&#39;</span>) <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>  phrase <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Temporarily enhancing PATH to include DevKit...&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> defined?(<span style="color:#66d9ef">Gem</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Gem</span><span style="color:#f92672">.</span>ui<span style="color:#f92672">.</span>say(phrase) <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">Gem</span><span style="color:#f92672">.</span>configuration<span style="color:#f92672">.</span>verbose
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    puts phrase
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  puts <span style="color:#e6db74">&#34;Prepending ENV[&#39;PATH&#39;] to include DevKit...&#34;</span> <span style="color:#66d9ef">if</span> $DEBUG
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;PATH&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;D:\\Program Files\\DevKit\\bin;D:\\Program Files\\DevKit\\mingw\\bin;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;PATH&#39;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;RI_DEVKIT&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;D:\\Program Files\\DevKit&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;CC&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;gcc&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;CXX&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;g++&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ENV</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;CPP&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cpp&#39;</span>
+</span></span></code></pre></div><p>就这样解决了，一般情况下，如果 DevKit 正确安装但仍然不能用，那么上面这种方式就可以试试。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ruby/">Ruby</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>转载请联系我</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/ruby-gem-download-failed/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RubyGem 下载失败的解决方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 我的工作记录
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

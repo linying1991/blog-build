@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cmd on 我的工作记录</title>
+        <link>https://52haowu.cn/categories/cmd/</link>
+        <description>Recent content in Cmd on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 26 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/categories/cmd/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Explorer 命令行开关</title>
+        <link>https://52haowu.cn/p/explorer_command_line/</link>
+        <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/explorer_command_line/</guid>
+        <description>&lt;h1 id=&#34;介绍&#34;&gt;介绍
+&lt;/h1&gt;&lt;p&gt;说到 Explorer 的命令行，我自己用得比较多的，就下边几种情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开（弹出）文件夹&lt;/li&gt;
+&lt;li&gt;定位文件或文件夹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;例子&#34;&gt;例子
+&lt;/h1&gt;&lt;p&gt;本文主要介绍第 2 种情况的命令行用法。&lt;/p&gt;
+&lt;p&gt;命令开关比较简单，那就是 &lt;code&gt;/select,文件路径&lt;/code&gt;。文件路径即便包含空格，也可以不用加 &lt;code&gt;&amp;quot;&lt;/code&gt;。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;explorer.exe /select,&amp;#34;C:\Program Files&amp;#34;
+explorer.exe /select,C:\Program Files
+explorer.exe /select,C:\Windows\notepad.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;注意点&#34;&gt;注意点
+&lt;/h1&gt;&lt;p&gt;目录分割符必须用 &lt;code&gt;\&lt;/code&gt;，而不能用 &lt;code&gt;/&lt;/code&gt;，否则无法正常定位到文件。&lt;/p&gt;
+&lt;h1 id=&#34;更多知识点&#34;&gt;更多知识点
+&lt;/h1&gt;&lt;p&gt;还有其他我认为比较冷门的命令开关，有兴趣可进行了解。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ss64.com/nt/explorer.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;更多命令开关&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>xcopy 命令的常用开关</title>
+        <link>https://52haowu.cn/p/xcopy/</link>
+        <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/xcopy/</guid>
+        <description>&lt;h1 id=&#34;说明&#34;&gt;说明
+&lt;/h1&gt;&lt;p&gt;xcopy 用于复制文件和目录树（即递归复制），配合自带的开关，功能强大。&lt;/p&gt;
+&lt;p&gt;平时主要是配置自动化的时候用，也就是用得并不多，但是作用却很大。&lt;/p&gt;
+&lt;p&gt;因此就很容易忘记命令和开关的作用以及目标结果，这里开一篇文章，把经常使用的列进来，作为一个记录，随时可搜索查看。&lt;/p&gt;
+&lt;h1 id=&#34;开关说明&#34;&gt;开关说明
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;例子中，目标地址我都采用目录，其实文件也是可以的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;开关-i如果目标不存在且要复制多个文件则假定目标必须是目录&#34;&gt;开关 /I：如果目标不存在，且要复制多个文件，则假定目标必须是目录。
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /I 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;开关-e复制目录和子目录包括空目录即克隆整个目录不包括隐藏和系统文件如果需要加上-h&#34;&gt;开关 /E：复制目录和子目录，包括空目录。（即克隆整个目录，不包括隐藏和系统文件，如果需要，加上 /H）
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /I /E 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;开关-y如果目标文件存在自动覆盖&#34;&gt;开关 /Y：如果目标文件存在，自动覆盖。
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /Y 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;开关-q复制时不显示文件名复制完毕后仅显示复制了多少个文件&#34;&gt;开关 /Q：复制时不显示文件名。（复制完毕后仅显示复制了多少个文件）
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /Q 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;更多开关可通过下方命令进行查看&#34;&gt;更多开关可通过下方命令进行查看
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /?
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;使用例子&#34;&gt;使用例子
+&lt;/h1&gt;&lt;p&gt;将源目录里边的文件（不含当前目录），复制到目标目录（自动创建目录，支持创建多级目录），并且&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;包括子文件&lt;/li&gt;
+&lt;li&gt;自动覆盖&lt;/li&gt;
+&lt;li&gt;不显示复制的路径&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /I /E /Y /Q 源目录 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Terminal on 我的工作记录</title>
+        <link>https://52haowu.cn/tags/terminal/</link>
+        <description>Recent content in Terminal on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 13 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/tags/terminal/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows Terminal，官方的新终端程序</title>
+        <link>https://52haowu.cn/p/windows_terminal/</link>
+        <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/windows_terminal/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;官方介绍：&lt;/p&gt;
+&lt;p&gt;Windows 终端程序是一款新式、快速、高效、强大且高效的终端应用程序，适用于命令行工具和命令提示符，PowerShell和 WSL 等 Shell 用户。主要功能包括多个选项卡、窗格、Unicode、和 UTF-8 字符支持，GPU 加速文本渲染引擎以及自定义主题、样式和配置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;介绍&#34;&gt;介绍
+&lt;/h1&gt;&lt;p&gt;Windows Terminal 是 Windows 10 以后官方开源发布的一款终端，Windows 11 系统已经默认安装。&lt;/p&gt;
+&lt;h1 id=&#34;特点&#34;&gt;特点
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;我主要是因为一、二点而很喜欢使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;好看：界面很美观，用了这个再也不想用回系统自带的 cmd 了&lt;/li&gt;
+&lt;li&gt;右键菜单（安装后需重启资源管理器或重开机）
+&lt;ul&gt;
+&lt;li&gt;桌面右键&lt;/li&gt;
+&lt;li&gt;文件夹右键&lt;/li&gt;
+&lt;li&gt;文件夹背景右键&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;多标签页&lt;/li&gt;
+&lt;li&gt;丰富的快捷键&lt;/li&gt;
+&lt;li&gt;适用于命令行工具和命令提示符，PowerShell和 WSL 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/windows-terminal/001.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/windows-terminal/002.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;安装
+&lt;/h1&gt;&lt;h2 id=&#34;应用商店安装&#34;&gt;应用商店安装
+&lt;/h2&gt;&lt;p&gt;通过应用商店安装，可点击下方地址，或直接在 Microsoft Store 里边搜索 Terminal&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/store/productId/9N0DX20HK701&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;安装地址（应用商店）&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载安装&#34;&gt;下载安装
+&lt;/h2&gt;&lt;p&gt;可直接到官方开源仓库的 Release 里边下载，文件后缀为 &lt;code&gt;.msixbundle&lt;/code&gt;，下载后双击安装即可&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/terminal/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址（GitHub）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/windows-terminal/003.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

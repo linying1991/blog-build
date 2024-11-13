@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on 我的工作记录</title>
+        <link>https://52haowu.cn/categories/</link>
+        <description>Recent content in Categories on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Git</title>
+        <link>https://52haowu.cn/categories/git/</link>
+        <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Cmd</title>
+        <link>https://52haowu.cn/categories/cmd/</link>
+        <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/cmd/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Tools</title>
+        <link>https://52haowu.cn/categories/tools/</link>
+        <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/tools/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Vue</title>
+        <link>https://52haowu.cn/categories/vue/</link>
+        <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/vue/</guid>
+        <description>&lt;img src="https://52haowu.cn/categories/vue/vue.png" alt="Featured image of post Vue" /&gt;&lt;p&gt;Image by Vue from &lt;!-- raw HTML omitted --&gt;Vue&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>技巧</title>
+        <link>https://52haowu.cn/categories/%E6%8A%80%E5%B7%A7/</link>
+        <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/%E6%8A%80%E5%B7%A7/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Chrome</title>
+        <link>https://52haowu.cn/categories/chrome/</link>
+        <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/chrome/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>JavaScript</title>
+        <link>https://52haowu.cn/categories/javascript/</link>
+        <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/javascript/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>RubyGem</title>
+        <link>https://52haowu.cn/categories/rubygem/</link>
+        <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/rubygem/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ruby</title>
+        <link>https://52haowu.cn/categories/ruby/</link>
+        <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/ruby/</guid>
+        <description>&lt;img src="https://52haowu.cn/categories/ruby/ruby.png" alt="Featured image of post Ruby" /&gt;&lt;p&gt;Image by &lt;!-- raw HTML omitted --&gt;OpenClipart-Vectors&lt;!-- raw HTML omitted --&gt; from &lt;!-- raw HTML omitted --&gt;Pixabay&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Gem</title>
+        <link>https://52haowu.cn/categories/gem/</link>
+        <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/gem/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>IDE</title>
+        <link>https://52haowu.cn/categories/ide/</link>
+        <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/ide/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>JetBrains</title>
+        <link>https://52haowu.cn/categories/jetbrains/</link>
+        <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/categories/jetbrains/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

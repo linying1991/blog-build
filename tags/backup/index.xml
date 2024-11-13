@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Backup on 我的工作记录</title>
+        <link>https://52haowu.cn/tags/backup/</link>
+        <description>Recent content in Backup on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/tags/backup/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>git 远端仓库全量备份</title>
+        <link>https://52haowu.cn/p/git-remote-backup/</link>
+        <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/git-remote-backup/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;该文章源于 Stack Overflow：&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/a/23924942&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fully backup a git repo? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有时候需要对仓库进行备份，特别是 git 远端如果是部署在内网的话，进行全量备份非常有必要。&lt;/p&gt;
+&lt;h1 id=&#34;操作一共有两步&#34;&gt;操作一共有两步
+&lt;/h1&gt;&lt;h3 id=&#34;1镜像克隆-git-远端仓库全量&#34;&gt;1️⃣镜像克隆 git 远端仓库（全量）
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/docs/git-clone/zh_HANS-CN#git-clone---mirror&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git - git-clone Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;包括远程跟踪分支、标签等&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone --mirror 远端仓库地址.git
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;2更新镜像仓库&#34;&gt;2️⃣更新镜像仓库
+&lt;/h3&gt;&lt;p&gt;cd 进入仓库目录&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;即使未来有新增分支，也一样能更新下来，并且被删除的分支不会从镜像中被删除&lt;/p&gt;
+&lt;h1 id=&#34;扩展打包为单个文件&#34;&gt;扩展：打包为单个文件
+&lt;/h1&gt;&lt;p&gt;依然需要 cd 进入仓库目录&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git bundle create 仓库名.bundle --all
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

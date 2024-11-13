@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on 我的工作记录</title>
+        <link>https://52haowu.cn/post/</link>
+        <description>Recent content in Posts on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>git 远端仓库全量备份</title>
+        <link>https://52haowu.cn/p/git-remote-backup/</link>
+        <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/git-remote-backup/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;该文章源于 Stack Overflow：&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/a/23924942&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fully backup a git repo? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有时候需要对仓库进行备份，特别是 git 远端如果是部署在内网的话，进行全量备份非常有必要。&lt;/p&gt;
+&lt;h1 id=&#34;操作一共有两步&#34;&gt;操作一共有两步
+&lt;/h1&gt;&lt;h3 id=&#34;1镜像克隆-git-远端仓库全量&#34;&gt;1️⃣镜像克隆 git 远端仓库（全量）
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/docs/git-clone/zh_HANS-CN#git-clone---mirror&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git - git-clone Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;包括远程跟踪分支、标签等&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone --mirror 远端仓库地址.git
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;2更新镜像仓库&#34;&gt;2️⃣更新镜像仓库
+&lt;/h3&gt;&lt;p&gt;cd 进入仓库目录&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;即使未来有新增分支，也一样能更新下来，并且被删除的分支不会从镜像中被删除&lt;/p&gt;
+&lt;h1 id=&#34;扩展打包为单个文件&#34;&gt;扩展：打包为单个文件
+&lt;/h1&gt;&lt;p&gt;依然需要 cd 进入仓库目录&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git bundle create 仓库名.bundle --all
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>Explorer 命令行开关</title>
+        <link>https://52haowu.cn/p/explorer_command_line/</link>
+        <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/explorer_command_line/</guid>
+        <description>&lt;h1 id=&#34;介绍&#34;&gt;介绍
+&lt;/h1&gt;&lt;p&gt;说到 Explorer 的命令行，我自己用得比较多的，就下边几种情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开（弹出）文件夹&lt;/li&gt;
+&lt;li&gt;定位文件或文件夹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;例子&#34;&gt;例子
+&lt;/h1&gt;&lt;p&gt;本文主要介绍第 2 种情况的命令行用法。&lt;/p&gt;
+&lt;p&gt;命令开关比较简单，那就是 &lt;code&gt;/select,文件路径&lt;/code&gt;。文件路径即便包含空格，也可以不用加 &lt;code&gt;&amp;quot;&lt;/code&gt;。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;explorer.exe /select,&amp;#34;C:\Program Files&amp;#34;
+explorer.exe /select,C:\Program Files
+explorer.exe /select,C:\Windows\notepad.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;注意点&#34;&gt;注意点
+&lt;/h1&gt;&lt;p&gt;目录分割符必须用 &lt;code&gt;\&lt;/code&gt;，而不能用 &lt;code&gt;/&lt;/code&gt;，否则无法正常定位到文件。&lt;/p&gt;
+&lt;h1 id=&#34;更多知识点&#34;&gt;更多知识点
+&lt;/h1&gt;&lt;p&gt;还有其他我认为比较冷门的命令开关，有兴趣可进行了解。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ss64.com/nt/explorer.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;更多命令开关&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>给 GitHub Desktop 加上右键菜单</title>
+        <link>https://52haowu.cn/p/github_desktop_contextmenu/</link>
+        <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/github_desktop_contextmenu/</guid>
+        <description>&lt;p&gt;GitHub Desktop 是一款操作简单，界面很好看的客户端。&lt;/p&gt;
+&lt;p&gt;我为它添加了目录背景右键的功能，当鼠标在文件夹空白处右键，点击 GitHub Desktop，即可快速打开并定位到相关仓库（或添加仓库）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/github-desktop-contextmenu/001.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;启用&#34;&gt;启用
+&lt;/h1&gt;&lt;p&gt;将下方内容，&lt;code&gt;你的用户名&lt;/code&gt; 改成你电脑的用户名，保存为 &lt;code&gt;.reg&lt;/code&gt; 文件，双击导入注册表，立刻生效。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\GitHubDesktop]
+&amp;#34;Icon&amp;#34;=&amp;#34;C:\\Users\\%USERNAME%\\AppData\\Local\\GitHubDesktop\\GitHubDesktop.exe,0&amp;#34;
+@=&amp;#34;GitHub Desktop&amp;#34;
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\GitHubDesktop\command]
+@=&amp;#34;C:\\Users\\你的用户名\\AppData\\Local\\GitHubDesktop\\bin\\github.bat \&amp;#34;%V\&amp;#34;&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;停用&#34;&gt;停用
+&lt;/h1&gt;&lt;p&gt;将下方内容，保存为 &lt;code&gt;.reg&lt;/code&gt; 文件，双击导入注册表，立刻失效。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\GitHubDesktop]
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>Windows Terminal，官方的新终端程序</title>
+        <link>https://52haowu.cn/p/windows_terminal/</link>
+        <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/windows_terminal/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;官方介绍：&lt;/p&gt;
+&lt;p&gt;Windows 终端程序是一款新式、快速、高效、强大且高效的终端应用程序，适用于命令行工具和命令提示符，PowerShell和 WSL 等 Shell 用户。主要功能包括多个选项卡、窗格、Unicode、和 UTF-8 字符支持，GPU 加速文本渲染引擎以及自定义主题、样式和配置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;介绍&#34;&gt;介绍
+&lt;/h1&gt;&lt;p&gt;Windows Terminal 是 Windows 10 以后官方开源发布的一款终端，Windows 11 系统已经默认安装。&lt;/p&gt;
+&lt;h1 id=&#34;特点&#34;&gt;特点
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;我主要是因为一、二点而很喜欢使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;好看：界面很美观，用了这个再也不想用回系统自带的 cmd 了&lt;/li&gt;
+&lt;li&gt;右键菜单（安装后需重启资源管理器或重开机）
+&lt;ul&gt;
+&lt;li&gt;桌面右键&lt;/li&gt;
+&lt;li&gt;文件夹右键&lt;/li&gt;
+&lt;li&gt;文件夹背景右键&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;多标签页&lt;/li&gt;
+&lt;li&gt;丰富的快捷键&lt;/li&gt;
+&lt;li&gt;适用于命令行工具和命令提示符，PowerShell和 WSL 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/windows-terminal/001.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/windows-terminal/002.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;安装
+&lt;/h1&gt;&lt;h2 id=&#34;应用商店安装&#34;&gt;应用商店安装
+&lt;/h2&gt;&lt;p&gt;通过应用商店安装，可点击下方地址，或直接在 Microsoft Store 里边搜索 Terminal&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/store/productId/9N0DX20HK701&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;安装地址（应用商店）&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载安装&#34;&gt;下载安装
+&lt;/h2&gt;&lt;p&gt;可直接到官方开源仓库的 Release 里边下载，文件后缀为 &lt;code&gt;.msixbundle&lt;/code&gt;，下载后双击安装即可&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/terminal/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址（GitHub）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/windows-terminal/003.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>解决 Vue 生成的 dist 在本地打开失败</title>
+        <link>https://52haowu.cn/p/vue_cli_build_local/</link>
+        <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/vue_cli_build_local/</guid>
+        <description>&lt;p&gt;在 &lt;code&gt;vue.config.js&lt;/code&gt; 里把 &lt;code&gt;publicPath&lt;/code&gt; 设置为 &lt;code&gt;./&lt;/code&gt;，打包后即可直接双击 html 查看，无需放到服务器里边。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vue&#34; data-lang=&#34;vue&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;module&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;exports&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;publicPath&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;./&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>几个英文搜索关键字</title>
+        <link>https://52haowu.cn/p/search_keywords/</link>
+        <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/search_keywords/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;可能仅适合英文和我一样比较不好的朋友&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有些资料，需要用到英文来进行搜索，而表达不准确的单词，会让你难以找到想要的结果。&lt;/p&gt;
+&lt;p&gt;分享几个摸索出来的关键字。&lt;/p&gt;
+&lt;h2 id=&#34;awesome&#34;&gt;awesome
+&lt;/h2&gt;&lt;p&gt;搜索编程语言、框架等周边的相关技术，可以搜到大量你想了解的。&lt;/p&gt;
+&lt;p&gt;比如：awesome ruby、awesome go、awesome gin、awesome windows 等。&lt;/p&gt;
+&lt;h2 id=&#34;alternatives&#34;&gt;alternatives
+&lt;/h2&gt;&lt;p&gt;搜索替代方案，竞品。&lt;/p&gt;
+&lt;p&gt;比如：google alternatives，可以搜到一堆搜索引擎；windows alternatives，可以搜到一堆操作系统。&lt;/p&gt;
+&lt;h2 id=&#34;vs&#34;&gt;vs
+&lt;/h2&gt;&lt;p&gt;搜索对比替代方案，竞品。&lt;/p&gt;
+&lt;p&gt;比如：在搜索框输入 google vs ，等待搜索框的智能提示，也可以看到不少的替代方案。&lt;/p&gt;
+&lt;p&gt;后面还有其他的再继续补充 😊&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Chrome 命令行大全</title>
+        <link>https://52haowu.cn/p/chrome_switches/</link>
+        <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/chrome_switches/</guid>
+        <description>&lt;h1 id=&#34;介绍&#34;&gt;介绍
+&lt;/h1&gt;&lt;p&gt;Chrome（包括 WebKit 版的 Edge）是支持通过命令行进行控制的，可以以此来改变浏览器的行为，或进行调试等等。&lt;/p&gt;
+&lt;p&gt;比方说可以通过 &lt;code&gt;--user-data-dir&lt;/code&gt; 命令行，通过自定义用户数据目录，创建多个独立空间的浏览器。&lt;/p&gt;
+&lt;h1 id=&#34;例子&#34;&gt;例子
+&lt;/h1&gt;&lt;p&gt;下方示例用于创建 4 个独立空间的浏览器，每个浏览器的插件、用户、历史数据、书签等都是独立存在的。&lt;/p&gt;
+&lt;p&gt;如果想要经常这么使用，你可以通过创建快捷方式方便使用。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chrome.exe &amp;#34;--user-data-dir=用户自定义数据路径1&amp;#34;
+chrome.exe &amp;#34;--user-data-dir=用户自定义数据路径2&amp;#34;
+chrome.exe &amp;#34;--user-data-dir=用户自定义数据路径3&amp;#34;
+chrome.exe &amp;#34;--user-data-dir=用户自定义数据路径4&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;更多的开关&#34;&gt;更多的开关
+&lt;/h1&gt;&lt;p&gt;上边只是其中的一个例子，还有很多命令可使用，下方链接有汇总，有兴趣可查看。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://peter.sh/experiments/chromium-command-line-switches/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://peter.sh/experiments/chromium-command-line-switches/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>前端 Zip 压缩库</title>
+        <link>https://52haowu.cn/p/zip_js/</link>
+        <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/zip_js/</guid>
+        <description>&lt;h1 id=&#34;介绍&#34;&gt;介绍
+&lt;/h1&gt;&lt;p&gt;Zip.js 是一个前端库，用于压缩和解压 zip 文件，运行于浏览器和 Deno。&lt;/p&gt;
+&lt;p&gt;开源协议友好，适合使用。&lt;/p&gt;
+&lt;h1 id=&#34;功能特性&#34;&gt;功能特性
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;支持 Zip64 格式&lt;/li&gt;
+&lt;li&gt;支持 WinZIP AES 和 PKWare ZipCrypto 加密技术&lt;/li&gt;
+&lt;li&gt;支持对一个或多个 Zip 文件的同时读和写&lt;/li&gt;
+&lt;li&gt;支持 Worker&lt;/li&gt;
+&lt;li&gt;无依赖性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;兼容性&#34;&gt;兼容性
+&lt;/h1&gt;&lt;p&gt;该库完全适用于最新版本的 Chrome、Firefox、Safari 和 Microsoft Edge。&lt;/p&gt;
+&lt;h1 id=&#34;官网&#34;&gt;官网
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gildas-lormeau.github.io/zip.js/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;访问&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>xcopy 命令的常用开关</title>
+        <link>https://52haowu.cn/p/xcopy/</link>
+        <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/xcopy/</guid>
+        <description>&lt;h1 id=&#34;说明&#34;&gt;说明
+&lt;/h1&gt;&lt;p&gt;xcopy 用于复制文件和目录树（即递归复制），配合自带的开关，功能强大。&lt;/p&gt;
+&lt;p&gt;平时主要是配置自动化的时候用，也就是用得并不多，但是作用却很大。&lt;/p&gt;
+&lt;p&gt;因此就很容易忘记命令和开关的作用以及目标结果，这里开一篇文章，把经常使用的列进来，作为一个记录，随时可搜索查看。&lt;/p&gt;
+&lt;h1 id=&#34;开关说明&#34;&gt;开关说明
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;例子中，目标地址我都采用目录，其实文件也是可以的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;开关-i如果目标不存在且要复制多个文件则假定目标必须是目录&#34;&gt;开关 /I：如果目标不存在，且要复制多个文件，则假定目标必须是目录。
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /I 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;开关-e复制目录和子目录包括空目录即克隆整个目录不包括隐藏和系统文件如果需要加上-h&#34;&gt;开关 /E：复制目录和子目录，包括空目录。（即克隆整个目录，不包括隐藏和系统文件，如果需要，加上 /H）
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /I /E 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;开关-y如果目标文件存在自动覆盖&#34;&gt;开关 /Y：如果目标文件存在，自动覆盖。
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /Y 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;开关-q复制时不显示文件名复制完毕后仅显示复制了多少个文件&#34;&gt;开关 /Q：复制时不显示文件名。（复制完毕后仅显示复制了多少个文件）
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /Q 源目录或文件 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;更多开关可通过下方命令进行查看&#34;&gt;更多开关可通过下方命令进行查看
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /?
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;使用例子&#34;&gt;使用例子
+&lt;/h1&gt;&lt;p&gt;将源目录里边的文件（不含当前目录），复制到目标目录（自动创建目录，支持创建多级目录），并且&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;包括子文件&lt;/li&gt;
+&lt;li&gt;自动覆盖&lt;/li&gt;
+&lt;li&gt;不显示复制的路径&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xcopy /I /E /Y /Q 源目录 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>RubyZip，压缩解压工具</title>
+        <link>https://52haowu.cn/p/rubyzip/</link>
+        <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/rubyzip/</guid>
+        <description>&lt;h1 id=&#34;说明&#34;&gt;说明
+&lt;/h1&gt;&lt;p&gt;RubyZip 用于 ruby 进行 zip 的压缩和解压&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rubyzip/rubyzip/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;仓库地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://rdoc.info/github/rubyzip/rubyzip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;安装方法&#34;&gt;安装方法
+&lt;/h1&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gem install rubyzip
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;使用例子&#34;&gt;使用例子
+&lt;/h1&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 配置例子&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;zip&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Zip&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;setup &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;c&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# 当压缩包里边存在同名文件时，自动覆盖。但如果有同名文件夹，还是会抛异常&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  c&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;continue_on_exists_proc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# 解压时自动覆盖文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  c&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;on_exists_proc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# 强制编码为 UTF-8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  c&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;force_entry_names_encoding &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;UTF-8&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# c.default_compression = Zlib::BEST_COMPRESSION&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 压缩例子 1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;zip&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;input_file &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;输入文件&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_zip &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;输出 zip&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Zip&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;File&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;open(output_zip, &lt;span style=&#34;color:#66d9ef&#34;&gt;Zip&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;File&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;zip_file&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# 添加文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# 文件名支持带有目录，会在压缩包里边自动创建目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# 文件名需使用相对路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  zip_file&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;文件&amp;#39;&lt;/span&gt;, input_file)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  zip_file&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;文件夹/文件&amp;#39;&lt;/span&gt;, input_file)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# 添加目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  zip_file&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mkdir(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;创建目录&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 压缩例子 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# https://github.com/rubyzip/rubyzip/blob/9d891f7353e66052283562d3e252fe380bb4b199/samples/example_recursive.rb&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 解压例子&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 解压时压缩包里边的文件夹会被自动创建（空目录也会被创建），但输出路径 output_dir 必须存在，否则抛异常&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;zip&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;input_zip &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;zip 文件路径&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;输出路径&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Zip&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;File&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;open(input_zip) &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;zip_file&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  zip_file&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;each &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;entry&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    entry&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;extract(&lt;span style=&#34;color:#66d9ef&#34;&gt;File&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(output_dir, entry&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>HTTP 头字段大全</title>
+        <link>https://52haowu.cn/p/http-headers/</link>
+        <pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/http-headers/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;下方表格内容来自维基百科：&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/zh/HTTP%e5%a4%b4%e5%ad%97%e6%ae%b5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HTTP头字段&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MDN 的也不错，也顺便贴上来：&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HTTP Headers&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;请求字段&#34;&gt;请求字段
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;协议头字段名&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+          &lt;th&gt;示例&lt;/th&gt;
+          &lt;th&gt;状态&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Accept&lt;/td&gt;
+          &lt;td&gt;能够接受的回应内容类型（Content-Types）。参见内容协商。&lt;/td&gt;
+          &lt;td&gt;Accept: text/plain&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Accept-Charset&lt;/td&gt;
+          &lt;td&gt;能够接受的字符集&lt;/td&gt;
+          &lt;td&gt;Accept-Charset: utf-8&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Accept-Encoding&lt;/td&gt;
+          &lt;td&gt;能够接受的编码方式列表。参考HTTP压缩。&lt;/td&gt;
+          &lt;td&gt;Accept-Encoding: gzip, deflate&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Accept-Language&lt;/td&gt;
+          &lt;td&gt;能够接受的回应内容的自然语言列表。参考 内容协商 。&lt;/td&gt;
+          &lt;td&gt;Accept-Language: en-US&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Accept-Datetime&lt;/td&gt;
+          &lt;td&gt;能够接受的按照时间来表示的版本&lt;/td&gt;
+          &lt;td&gt;Accept-Datetime: Thu, 31 May 2007 20:35:00 GMT&lt;/td&gt;
+          &lt;td&gt;临时&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Authorization&lt;/td&gt;
+          &lt;td&gt;用于超文本传输协议的认证的认证信息&lt;/td&gt;
+          &lt;td&gt;Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Cache-Control&lt;/td&gt;
+          &lt;td&gt;用来指定在这次的请求/响应链中的所有缓存机制 都必须 遵守的指令&lt;/td&gt;
+          &lt;td&gt;Cache-Control: no-cache&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Connection&lt;/td&gt;
+          &lt;td&gt;该浏览器想要优先使用的连接类型&lt;/td&gt;
+          &lt;td&gt;Connection: keep-alive; Connection: Upgrade&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Cookie&lt;/td&gt;
+          &lt;td&gt;之前由服务器通过 Set- Cookie （下文详述）发送的一个 超文本传输协议Cookie&lt;/td&gt;
+          &lt;td&gt;Cookie: $Version=1; Skin=new;&lt;/td&gt;
+          &lt;td&gt;常设: 标准&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-Length&lt;/td&gt;
+          &lt;td&gt;以 八位字节数组 （8位的字节）表示的请求体的长度&lt;/td&gt;
+          &lt;td&gt;Content-Length: 348&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-MD5&lt;/td&gt;
+          &lt;td&gt;请求体的内容的二进制 MD5 散列值，以 Base64 编码的结果&lt;/td&gt;
+          &lt;td&gt;Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==&lt;/td&gt;
+          &lt;td&gt;过时的&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-Type&lt;/td&gt;
+          &lt;td&gt;请求体的 多媒体类型 （用于POST和PUT请求中）&lt;/td&gt;
+          &lt;td&gt;Content-Type: application/x-www-form-urlencoded&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Date&lt;/td&gt;
+          &lt;td&gt;发送该消息的日期和时间(按照 RFC 7231 中定义的&amp;quot;超文本传输协议日期&amp;quot;格式来发送)&lt;/td&gt;
+          &lt;td&gt;Date: Tue, 15 Nov 1994 08:12:31 GMT&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Expect&lt;/td&gt;
+          &lt;td&gt;表明客户端要求服务器做出特定的行为&lt;/td&gt;
+          &lt;td&gt;Expect: 100-continue&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;From&lt;/td&gt;
+          &lt;td&gt;发起此请求的用户的邮件地址&lt;/td&gt;
+          &lt;td&gt;From: &lt;a class=&#34;link&#34; href=&#34;mailto:user@example.com&#34; &gt;user@example.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Host&lt;/td&gt;
+          &lt;td&gt;服务器的域名(用于虚拟主机 )，以及服务器所监听的传输控制协议端口号。如果所请求的端口是对应的服务的标准端口，则端口号可被省略。自超文件传输协议版本1.1（HTTP/1.1）开始便是必需字段。&lt;/td&gt;
+          &lt;td&gt;Host: zh.wikipedia.org:80; Host: zh.wikipedia.org&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;If-Match&lt;/td&gt;
+          &lt;td&gt;仅当客户端提供的实体与服务器上对应的实体相匹配时，才进行对应的操作。主要作用时，用作像 PUT 这样的方法中，仅当从用户上次更新某个资源以来，该资源未被修改的情况下，才更新该资源。&lt;/td&gt;
+          &lt;td&gt;If-Match: &amp;ldquo;737060cd8c284d8af7ad3082f209582d&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;If-Modified-Since&lt;/td&gt;
+          &lt;td&gt;允许在对应的内容未被修改的情况下返回304未修改（ 304 Not Modified ）&lt;/td&gt;
+          &lt;td&gt;If-Modified-Since: Sat, 29 Oct 1994 19:43:31 GMT&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;If-None-Match&lt;/td&gt;
+          &lt;td&gt;允许在对应的内容未被修改的情况下返回304未修改（ 304 Not Modified ），参考 超文本传输协议 的实体标记&lt;/td&gt;
+          &lt;td&gt;If-None-Match: &amp;ldquo;737060cd8c284d8af7ad3082f209582d&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;If-Range&lt;/td&gt;
+          &lt;td&gt;如果该实体未被修改过，则向我发送我所缺少的那一个或多个部分；否则，发送整个新的实体&lt;/td&gt;
+          &lt;td&gt;If-Range: &amp;ldquo;737060cd8c284d8af7ad3082f209582d&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;If-Unmodified-Since&lt;/td&gt;
+          &lt;td&gt;仅当该实体自某个特定时间已来未被修改的情况下，才发送回应。&lt;/td&gt;
+          &lt;td&gt;If-Unmodified-Since: Sat, 29 Oct 1994 19:43:31 GMT&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Max-Forwards&lt;/td&gt;
+          &lt;td&gt;限制该消息可被代理及网关转发的次数。&lt;/td&gt;
+          &lt;td&gt;Max-Forwards: 10&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Origin&lt;/td&gt;
+          &lt;td&gt;发起一个针对 跨来源资源共享 的请求（要求服务器在回应中加入一个‘访问控制-允许来源’（&amp;lsquo;Access-Control-Allow-Origin&amp;rsquo;）字段）。&lt;/td&gt;
+          &lt;td&gt;Origin: &lt;a class=&#34;link&#34; href=&#34;http://www.example-social-network.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.example-social-network.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;常设: 标准&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Pragma&lt;/td&gt;
+          &lt;td&gt;与具体的实现相关，这些字段可能在请求/回应链中的任何时候产生多种效果。&lt;/td&gt;
+          &lt;td&gt;Pragma: no-cache&lt;/td&gt;
+          &lt;td&gt;常设但不常用&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Proxy-Authorization&lt;/td&gt;
+          &lt;td&gt;用来向代理进行认证的认证信息。&lt;/td&gt;
+          &lt;td&gt;Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Range&lt;/td&gt;
+          &lt;td&gt;仅请求某个实体的一部分。字节偏移以0开始。参见字节服务。&lt;/td&gt;
+          &lt;td&gt;Range: bytes=500-999&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Referer&lt;/td&gt;
+          &lt;td&gt;表示浏览器所访问的前一个页面，正是那个页面上的某个链接将浏览器带到了当前所请求的这个页面。&lt;/td&gt;
+          &lt;td&gt;Referer: &lt;a class=&#34;link&#34; href=&#34;http://zh.wikipedia.org/wiki/Main_Page&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://zh.wikipedia.org/wiki/Main_Page&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;TE&lt;/td&gt;
+          &lt;td&gt;浏览器预期接受的传输编码方式：可使用回应协议头 Transfer-Encoding 字段中的值；另外还可用&amp;quot;trailers&amp;quot;（与&amp;quot;分块 &amp;ldquo;传输方式相关）这个值来表明浏览器希望在最后一个尺寸为0的块之后还接收到一些额外的字段。&lt;/td&gt;
+          &lt;td&gt;TE: trailers, deflate&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;User-Agent&lt;/td&gt;
+          &lt;td&gt;浏览器的浏览器身份标识字符串&lt;/td&gt;
+          &lt;td&gt;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/21.0&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Upgrade&lt;/td&gt;
+          &lt;td&gt;要求服务器升级到另一个协议。&lt;/td&gt;
+          &lt;td&gt;Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Via&lt;/td&gt;
+          &lt;td&gt;向服务器告知，这个请求是由哪些代理发出的。&lt;/td&gt;
+          &lt;td&gt;Via: 1.0 fred, 1.1 example.com (Apache/1.1)&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Warning&lt;/td&gt;
+          &lt;td&gt;一个一般性的警告，告知，在实体内容体中可能存在错误。&lt;/td&gt;
+          &lt;td&gt;Warning: 199 Miscellaneous warning&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;响应字段&#34;&gt;响应字段
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;字段名&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+          &lt;th&gt;例子&lt;/th&gt;
+          &lt;th&gt;状态&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Access-Control-Allow-Origin&lt;/td&gt;
+          &lt;td&gt;指定哪些网站可参与到跨来源资源共享过程中&lt;/td&gt;
+          &lt;td&gt;Access-Control-Allow-Origin: *&lt;/td&gt;
+          &lt;td&gt;临时&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Accept-Patch&lt;/td&gt;
+          &lt;td&gt;指定服务器支持的文件格式类型。&lt;/td&gt;
+          &lt;td&gt;Accept-Patch: text/example;charset=utf-8&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Accept-Ranges&lt;/td&gt;
+          &lt;td&gt;这个服务器支持哪些种类的部分内容范围&lt;/td&gt;
+          &lt;td&gt;Accept-Ranges: bytes&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Age&lt;/td&gt;
+          &lt;td&gt;这个对象在代理缓存中存在的时间，以秒为单位&lt;/td&gt;
+          &lt;td&gt;Age: 12&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Allow&lt;/td&gt;
+          &lt;td&gt;对于特定资源有效的动作。针对HTTP/405这一错误代码而使用&lt;/td&gt;
+          &lt;td&gt;Allow: GET, HEAD&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Cache-Control&lt;/td&gt;
+          &lt;td&gt;向从服务器直到客户端在内的所有缓存机制告知，它们是否可以缓存这个对象。其单位为秒&lt;/td&gt;
+          &lt;td&gt;Cache-Control: max-age=3600&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Connection&lt;/td&gt;
+          &lt;td&gt;针对该连接所预期的选项&lt;/td&gt;
+          &lt;td&gt;Connection: close&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-Disposition&lt;/td&gt;
+          &lt;td&gt;一个可以让客户端下载文件并建议文件名的头部。文件名需要用双引号包裹。&lt;/td&gt;
+          &lt;td&gt;Content-Disposition: attachment; filename=&amp;ldquo;fname.ext&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-Encoding&lt;/td&gt;
+          &lt;td&gt;在数据上使用的编码类型。参考 超文本传输协议压缩 。&lt;/td&gt;
+          &lt;td&gt;Content-Encoding: gzip&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-Language&lt;/td&gt;
+          &lt;td&gt;内容所使用的语言&lt;/td&gt;
+          &lt;td&gt;Content-Language: da&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-Length&lt;/td&gt;
+          &lt;td&gt;回应消息体的长度，以 字节 （8位为一字节）为单位&lt;/td&gt;
+          &lt;td&gt;Content-Length: 348&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-Location&lt;/td&gt;
+          &lt;td&gt;所返回的数据的一个候选位置&lt;/td&gt;
+          &lt;td&gt;Content-Location: /index.htm&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-MD5&lt;/td&gt;
+          &lt;td&gt;回应内容的二进制 MD5 散列，以 Base64 方式编码&lt;/td&gt;
+          &lt;td&gt;Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==&lt;/td&gt;
+          &lt;td&gt;过时的&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-Range&lt;/td&gt;
+          &lt;td&gt;这条部分消息是属于某条完整消息的哪个部分&lt;/td&gt;
+          &lt;td&gt;Content-Range: bytes 21010-47021/47022&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Content-Type&lt;/td&gt;
+          &lt;td&gt;当前内容的MIME类型&lt;/td&gt;
+          &lt;td&gt;Content-Type: text/html; charset=utf-8&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Date&lt;/td&gt;
+          &lt;td&gt;此条消息被发送时的日期和时间(按照 RFC 7231 中定义的“超文本传输协议日期”格式来表示)&lt;/td&gt;
+          &lt;td&gt;Date: Tue, 15 Nov 1994 08:12:31 GMT&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ETag&lt;/td&gt;
+          &lt;td&gt;对于某个资源的某个特定版本的一个标识符，通常是一个 消息散列&lt;/td&gt;
+          &lt;td&gt;ETag: &amp;ldquo;737060cd8c284d8af7ad3082f209582d&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Expires&lt;/td&gt;
+          &lt;td&gt;指定一个日期/时间，超过该时间则认为此回应已经过期&lt;/td&gt;
+          &lt;td&gt;Expires: Thu, 01 Dec 1994 16:00:00 GMT&lt;/td&gt;
+          &lt;td&gt;常设: 标准&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Last-Modified&lt;/td&gt;
+          &lt;td&gt;所请求的对象的最后修改日期(按照 RFC 7231 中定义的“超文本传输协议日期”格式来表示)&lt;/td&gt;
+          &lt;td&gt;Last-Modified: Tue, 15 Nov 1994 12:45:26 GMT&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Link&lt;/td&gt;
+          &lt;td&gt;用来表达与另一个资源之间的类型关系，此处所说的类型关系是在 RFC 5988 中定义的&lt;/td&gt;
+          &lt;td&gt;Link: &lt;!-- raw HTML omitted --&gt;; rel=&amp;ldquo;alternate&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Location&lt;/td&gt;
+          &lt;td&gt;用来 进行重定向，或者在创建了某个新资源时使用。&lt;/td&gt;
+          &lt;td&gt;Location: &lt;a class=&#34;link&#34; href=&#34;http://www.w3.org/pub/WWW/People.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.w3.org/pub/WWW/People.html&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3P&lt;/td&gt;
+          &lt;td&gt;用于支持设置P3P策略，标准格式为“P3P:CP=&amp;ldquo;your_compact_policy&amp;rdquo;”。然而P3P规范并不成功，大部分现代浏览器没有完整实现该功能，而大量网站也将该值设为假值，从而足以用来欺骗浏览器的P3P插件功能并授权给第三方Cookies。&lt;/td&gt;
+          &lt;td&gt;P3P: CP=&amp;ldquo;This is not a P3P policy! See &lt;a class=&#34;link&#34; href=&#34;http://www.google.com/support/accounts/bin/answer.py?hl=en&amp;amp;answer=151657&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.google.com/support/accounts/bin/answer.py?hl=en&amp;answer=151657&lt;/a&gt; for more info.&amp;rdquo;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Pragma&lt;/td&gt;
+          &lt;td&gt;与具体的实现相关，这些字段可能在请求/回应链中的任何时候产生多种效果。&lt;/td&gt;
+          &lt;td&gt;Pragma: no-cache&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Proxy-Authenticate&lt;/td&gt;
+          &lt;td&gt;要求在访问代理时提供身份认证信息。&lt;/td&gt;
+          &lt;td&gt;Proxy-Authenticate: Basic&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Public-Key-Pins&lt;/td&gt;
+          &lt;td&gt;用于缓解中间人攻击，声明网站认证使用的传输层安全协议证书的散列值&lt;/td&gt;
+          &lt;td&gt;Public-Key-Pins: max-age=2592000; pin-sha256=&amp;ldquo;E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g=&amp;rdquo;;&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Refresh&lt;/td&gt;
+          &lt;td&gt;用于设定可定时的重定向跳转。右边例子设定了5秒后跳转至“http://www.w3.org/pub/WWW/People.html”。&lt;/td&gt;
+          &lt;td&gt;Refresh: 5; url=http://www.w3.org/pub/WWW/People.html&lt;/td&gt;
+          &lt;td&gt;专利并非标准&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Retry-After&lt;/td&gt;
+          &lt;td&gt;如果某个实体临时不可用，则，此协议头用来告知客户端日后重试。其值可以是一个特定的时间段(以秒为单位)或一个超文本传输协议日期。&lt;/td&gt;
+          &lt;td&gt;Example 1: Retry-After: 120; Example 2: Retry-After: Fri, 07 Nov 2014 23:59:59 GMT&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Server&lt;/td&gt;
+          &lt;td&gt;服务器的名字&lt;/td&gt;
+          &lt;td&gt;Server: Apache/2.4.1 (Unix)&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Set-Cookie&lt;/td&gt;
+          &lt;td&gt;HTTP cookie&lt;/td&gt;
+          &lt;td&gt;Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1&lt;/td&gt;
+          &lt;td&gt;常设: 标准&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Status&lt;/td&gt;
+          &lt;td&gt;通用网关接口 协议头字段，用来说明当前这个超文本传输协议回应的 状态 。普通的超文本传输协议回应，会使用单独的“状态行”（&amp;ldquo;Status-Line&amp;rdquo;）作为替代，这一点是在 RFC 7230 中定义的。&lt;/td&gt;
+          &lt;td&gt;Status: 200 OK&lt;/td&gt;
+          &lt;td&gt;Not listed as a registered field name（页面存档备份，存于互联网档案馆）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Strict-Transport-Security&lt;/td&gt;
+          &lt;td&gt;HTTP 严格传输安全这一头部告知客户端缓存这一强制 HTTPS 策略的时间，以及这一策略是否适用于其子域名。&lt;/td&gt;
+          &lt;td&gt;Strict-Transport-Security: max-age=16070400; includeSubDomains&lt;/td&gt;
+          &lt;td&gt;常设: 标准&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Trailer&lt;/td&gt;
+          &lt;td&gt;这个头部数值指示了在这一系列头部信息由由分块传输编码编码。&lt;/td&gt;
+          &lt;td&gt;Trailer: Max-Forwards&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Transfer-Encoding&lt;/td&gt;
+          &lt;td&gt;用来将实体安全地传输给用户的编码形式。当前定义的方法包括：分块（chunked）、compress、deflate、gzip和identity。&lt;/td&gt;
+          &lt;td&gt;Transfer-Encoding: chunked&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Upgrade&lt;/td&gt;
+          &lt;td&gt;要求客户端升级到另一个协议。&lt;/td&gt;
+          &lt;td&gt;Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Vary&lt;/td&gt;
+          &lt;td&gt;告知下游的代理服务器，应当如何对未来的请求协议头进行匹配，以决定是否可使用已缓存的回应内容而不是重新从原始服务器请求新的内容。&lt;/td&gt;
+          &lt;td&gt;Vary: *&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Via&lt;/td&gt;
+          &lt;td&gt;告知代理服务器的客户端，当前回应是通过什么途径发送的。&lt;/td&gt;
+          &lt;td&gt;Via: 1.0 fred, 1.1 example.com (Apache/1.1)&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Warning&lt;/td&gt;
+          &lt;td&gt;一般性的警告，告知在实体内容体中可能存在错误。&lt;/td&gt;
+          &lt;td&gt;Warning: 199 Miscellaneous warning&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WWW-Authenticate&lt;/td&gt;
+          &lt;td&gt;表明在请求获取这个实体时应当使用的认证模式。&lt;/td&gt;
+          &lt;td&gt;WWW-Authenticate: Basic&lt;/td&gt;
+          &lt;td&gt;常设&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;X-Frame-Options&lt;/td&gt;
+          &lt;td&gt;点击劫持保护：deny：该页面不允许在 frame 中展示，即使是同域名内。sameorigin：该页面允许同域名内在 frame 中展示。allow-from uri：该页面允许在指定uri的 frame 中展示。allowall：允许任意位置的frame显示，非标准值。&lt;/td&gt;
+          &lt;td&gt;X-Frame-Options: deny&lt;/td&gt;
+          &lt;td&gt;过时的&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>Vue 项目打包时去掉 .map 文件</title>
+        <link>https://52haowu.cn/p/vue-build-without-map/</link>
+        <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/vue-build-without-map/</guid>
+        <description>&lt;p&gt;在 &lt;code&gt;vue.config.js&lt;/code&gt; 里把 &lt;code&gt;productionSourceMap&lt;/code&gt; 设置为 false，项目生产打包就不会出现 .map 文件了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vue&#34; data-lang=&#34;vue&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;module&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;exports&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;productionSourceMap&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>HTTP 响应代码大全</title>
+        <link>https://52haowu.cn/p/http-status-code/</link>
+        <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/http-status-code/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;引用自 MDN：&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HTTP 响应代码&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;HTTP 响应状态代码指示特定 HTTP 请求是否已成功完成。响应分为五类：信息响应(&lt;code&gt;100&lt;/code&gt;–&lt;code&gt;199&lt;/code&gt;)，成功响应(&lt;code&gt;200&lt;/code&gt;–&lt;code&gt;299&lt;/code&gt;)，重定向(&lt;code&gt;300&lt;/code&gt;–&lt;code&gt;399&lt;/code&gt;)，客户端错误(&lt;code&gt;400&lt;/code&gt;–&lt;code&gt;499&lt;/code&gt;)和服务器错误 (&lt;code&gt;500&lt;/code&gt;–&lt;code&gt;599&lt;/code&gt;)。状态代码由 &lt;a class=&#34;link&#34; href=&#34;https://tools.ietf.org/html/rfc2616#section-10&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;section 10 of RFC 2616&lt;/a&gt;定义&lt;/p&gt;
+&lt;h2 id=&#34;信息响应httpsdevelopermozillaorgzh-cndocswebhttpstatus信息响应&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status#%e4%bf%a1%e6%81%af%e5%93%8d%e5%ba%94&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;信息响应&lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/100&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;100 Continue&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这个临时响应表明，迄今为止的所有内容都是可行的，客户端应该继续请求，如果已经完成，则忽略它。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/101&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;101 Switching Protocol&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;该代码是响应客户端的 &lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Upgrade (en-US)&lt;/a&gt; 标头发送的，并且指示服务器也正在切换的协议。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/102&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;102 Processing&lt;/code&gt;&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Glossary/WebDAV&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebDAV&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;此代码表示服务器已收到并正在处理该请求，但没有响应可用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/103&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;103 Early Hints&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此状态代码主要用于与&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Link&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;Link&lt;/code&gt;&lt;/a&gt; 链接头一起使用，以允许用户代理在服务器仍在准备响应时开始预加载资源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;成功响应httpsdevelopermozillaorgzh-cndocswebhttpstatus成功响应&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status#%e6%88%90%e5%8a%9f%e5%93%8d%e5%ba%94&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;成功响应&lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/200&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;200 OK&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请求成功。成功的含义取决于HTTP方法：GET：资源已被提取并在消息正文中传输。HEAD：实体标头位于消息正文中。POST：描述动作结果的资源在消息体中传输。TRACE：消息正文包含服务器收到的请求消息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/201&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;201 Created&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;该请求已成功，并因此创建了一个新的资源。这通常是在POST请求，或是某些PUT请求之后返回的响应。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/202&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;202 Accepted&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请求已经接收到，但还未响应，没有结果。意味着不会有一个异步的响应去表明当前请求的结果，预期另外的进程和服务去处理请求，或者批处理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/203&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;203 Non-Authoritative Information&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器已成功处理了请求，但返回的实体头部元信息不是在原始服务器上有效的确定集合，而是来自本地或者第三方的拷贝。当前的信息可能是原始版本的子集或者超集。例如，包含资源的元数据可能导致原始服务器知道元信息的超集。使用此状态码不是必须的，而且只有在响应不使用此状态码便会返回200 OK的情况下才是合适的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/204&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;204 No Content&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器成功处理了请求，但不需要返回任何实体内容，并且希望返回更新了的元信息。响应可能通过实体头部的形式，返回新的或更新后的元信息。如果存在这些头部信息，则应当与所请求的变量相呼应。如果客户端是浏览器的话，那么用户浏览器应保留发送了该请求的页面，而不产生任何文档视图上的变化，即使按照规范新的或更新后的元信息应当被应用到用户浏览器活动视图中的文档。由于204响应被禁止包含任何消息体，因此它始终以消息头后的第一个空行结尾。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/205&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;205 Reset Content&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器成功处理了请求，且没有返回任何内容。但是与204响应不同，返回此状态码的响应要求请求者重置文档视图。该响应主要是被用于接受用户输入后，立即重置表单，以便用户能够轻松地开始另一次输入。与204响应一样，该响应也被禁止包含任何消息体，且以消息头后的第一个空行结束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/206&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;206 Partial Content&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器已经成功处理了部分 GET 请求。类似于 FlashGet 或者迅雷这类的 HTTP 下载工具都是使用此类响应实现断点续传或者将一个大文档分解为多个下载段同时下载。该请求必须包含 Range 头信息来指示客户端希望得到的内容范围，并且可能包含 If-Range 来作为请求条件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/207&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;207 Multi-Status&lt;/code&gt;&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Glossary/WebDAV&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebDAV&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;由WebDAV(RFC 2518)扩展的状态码，代表之后的消息体将是一个XML消息，并且可能依照之前子请求数量的不同，包含一系列独立的响应代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/208&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;208 Already Reported&lt;/code&gt;&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Glossary/WebDAV&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebDAV&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;在 DAV 里面使用: propstat 响应元素以避免重复枚举多个绑定的内部成员到同一个集合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/226&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;226 IM Used&lt;/code&gt;&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://tools.ietf.org/html/rfc3229&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HTTP Delta encoding&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;服务器已经完成了对资源的 GET 请求，并且响应是对当前实例应用的一个或多个实例操作结果的表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;重定向httpsdevelopermozillaorgzh-cndocswebhttpstatus重定向&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status#%e9%87%8d%e5%ae%9a%e5%90%91&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;重定向&lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/300&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;300 Multiple Choice&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;被请求的资源有一系列可供选择的回馈信息，每个都有自己特定的地址和浏览器驱动的商议信息。用户或浏览器能够自行选择一个首选的地址进行重定向。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/301&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;301 Moved Permanently&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;被请求的资源已永久移动到新位置，并且将来任何对此资源的引用都应该使用本响应返回的若干个 URI 之一。如果可能，拥有链接编辑功能的客户端应当自动把请求的地址修改为从服务器反馈回来的地址。除非额外指定，否则这个响应也是可缓存的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/302&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;302 Found&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请求的资源现在临时从不同的 URI 响应请求。由于这样的重定向是临时的，客户端应当继续向原有地址发送以后的请求。只有在Cache-Control或Expires中进行了指定的情况下，这个响应才是可缓存的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/303&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;303 See Other&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对应当前请求的响应可以在另一个 URI 上被找到，而且客户端应当采用 GET 的方式访问那个资源。这个方法的存在主要是为了允许由脚本激活的POST请求输出重定向到一个新的资源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/304&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;304 Not Modified&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果客户端发送了一个带条件的 GET 请求且该请求已被允许，而文档的内容（自上次访问以来或者根据请求的条件）并没有改变，则服务器应当返回这个状态码。304 响应禁止包含消息体，因此始终以消息头后的第一个空行结尾。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;305 Use Proxy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;被请求的资源必须通过指定的代理才能被访问。Location 域中将给出指定的代理所在的 URI 信息，接收者需要重复发送一个单独的请求，通过这个代理才能访问相应资源。只有原始服务器才能建立305响应。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;306 unused&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在最新版的规范中，306 状态码已经不再被使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/307&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;307 Temporary Redirect&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请求的资源现在临时从不同的URI 响应请求。由于这样的重定向是临时的，客户端应当继续向原有地址发送以后的请求。只有在Cache-Control或Expires中进行了指定的情况下，这个响应才是可缓存的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/308&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;308 Permanent Redirect&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这意味着资源现在永久位于由 &lt;code&gt;Location:&lt;/code&gt; HTTP Response 标头指定的另一个 URI。 这与 &lt;code&gt;301 Moved Permanently HTTP&lt;/code&gt; 响应代码具有相同的语义，但用户代理不能更改所使用的 HTTP 方法：如果在第一个请求中使用 &lt;code&gt;POST&lt;/code&gt;，则必须在第二个请求中使用 &lt;code&gt;POST&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;客户端响应httpsdevelopermozillaorgzh-cndocswebhttpstatus客户端响应&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status#%e5%ae%a2%e6%88%b7%e7%ab%af%e5%93%8d%e5%ba%94&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;客户端响应&lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/400&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;400 Bad Request&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1、语义有误，当前请求无法被服务器理解。除非进行修改，否则客户端不应该重复提交这个请求。&lt;/p&gt;
+&lt;p&gt;2、请求参数有误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/401&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;401 Unauthorized&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;当前请求需要用户验证。该响应必须包含一个适用于被请求资源的 WWW-Authenticate 信息头用以询问用户信息。客户端可以重复提交一个包含恰当的 Authorization 头信息的请求。如果当前请求已经包含了 Authorization 证书，那么401响应代表着服务器验证已经拒绝了那些证书。如果401响应包含了与前一个响应相同的身份验证询问，且浏览器已经至少尝试了一次验证，那么浏览器应当向用户展示响应中包含的实体信息，因为这个实体信息中可能包含了相关诊断信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;402 Payment Required&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;此响应码保留以便将来使用，创造此响应码的最初目的是用于数字支付系统，然而现在并未使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/403&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;403 Forbidden&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器已经理解请求，但是拒绝执行它。与 401 响应不同的是，身份验证并不能提供任何帮助，而且这个请求也不应该被重复提交。如果这不是一个 HEAD 请求，而且服务器希望能够讲清楚为何请求不能被执行，那么就应该在实体内描述拒绝的原因。当然服务器也可以返回一个 404 响应，假如它不希望让客户端获得任何信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/404&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;404 Not Found&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请求失败，请求所希望得到的资源未被在服务器上发现。没有信息能够告诉用户这个状况到底是暂时的还是永久的。假如服务器知道情况的话，应当使用410状态码来告知旧资源因为某些内部的配置机制问题，已经永久的不可用，而且没有任何可以跳转的地址。404这个状态码被广泛应用于当服务器不想揭示到底为何请求被拒绝或者没有其他适合的响应可用的情况下。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/405&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;405 Method Not Allowed&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请求行中指定的请求方法不能被用于请求相应的资源。该响应必须返回一个Allow 头信息用以表示出当前资源能够接受的请求方法的列表。 鉴于 PUT，DELETE 方法会对服务器上的资源进行写操作，因而绝大部分的网页服务器都不支持或者在默认配置下不允许上述请求方法，对于此类请求均会返回405错误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/406&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;406 Not Acceptable&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请求的资源的内容特性无法满足请求头中的条件，因而无法生成响应实体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/407&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;407 Proxy Authentication Required&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;与401响应类似，只不过客户端必须在代理服务器上进行身份验证。代理服务器必须返回一个 Proxy-Authenticate 用以进行身份询问。客户端可以返回一个 Proxy-Authorization 信息头用以验证。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/408&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;408 Request Timeout&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请求超时。客户端没有在服务器预备等待的时间内完成一个请求的发送。客户端可以随时再次提交这一请求而无需进行任何更改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/409&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;409 Conflict&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由于和被请求的资源的当前状态之间存在冲突，请求无法完成。这个代码只允许用在这样的情况下才能被使用：用户被认为能够解决冲突，并且会重新提交新的请求。该响应应当包含足够的信息以便用户发现冲突的源头。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/410&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;410 Gone&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;被请求的资源在服务器上已经不再可用，而且没有任何已知的转发地址。这样的状况应当被认为是永久性的。如果可能，拥有链接编辑功能的客户端应当在获得用户许可后删除所有指向这个地址的引用。如果服务器不知道或者无法确定这个状况是否是永久的，那么就应该使用 404 状态码。除非额外说明，否则这个响应是可缓存的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/411&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;411 Length Required&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器拒绝在没有定义 &lt;code&gt;Content-Length&lt;/code&gt; 头的情况下接受请求。在添加了表明请求消息体长度的有效 &lt;code&gt;Content-Length&lt;/code&gt; 头之后，客户端可以再次提交该请求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/412&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;412 Precondition Failed&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器在验证在请求的头字段中给出先决条件时，没能满足其中的一个或多个。这个状态码允许客户端在获取资源时在请求的元信息（请求头字段数据）中设置先决条件，以此避免该请求方法被应用到其希望的内容以外的资源上。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/413&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;413 Payload Too Large&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器拒绝处理当前请求，因为该请求提交的实体数据大小超过了服务器愿意或者能够处理的范围。此种情况下，服务器可以关闭连接以免客户端继续发送此请求。如果这个状况是临时的，服务器应当返回一个 &lt;code&gt;Retry-After&lt;/code&gt; 的响应头，以告知客户端可以在多少时间以后重新尝试。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/414&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;414 URI Too Long&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请求的URI 长度超过了服务器能够解释的长度，因此服务器拒绝对该请求提供服务。这比较少见，通常的情况包括：本应使用POST方法的表单提交变成了GET方法，导致查询字符串（Query String）过长。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/415&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;415 Unsupported Media Type&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对于当前请求的方法和所请求的资源，请求中提交的实体并不是服务器中所支持的格式，因此请求被拒绝。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/416&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;416 Range Not Satisfiable&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果请求中包含了 Range 请求头，并且 Range 中指定的任何数据范围都与当前资源的可用范围不重合，同时请求中又没有定义 If-Range 请求头，那么服务器就应当返回416状态码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/417&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;417 Expectation Failed&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此响应代码意味着服务器无法满足 &lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Expect&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;Expect&lt;/code&gt;&lt;/a&gt; 请求标头字段指示的期望值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/418&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;418 I&#39;m a teapot&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器拒绝尝试用 &lt;code&gt;“茶壶冲泡咖啡”&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/421&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;421 Misdirected Request&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;该请求针对的是无法产生响应的服务器。 这可以由服务器发送，该服务器未配置为针对包含在请求 URI 中的方案和权限的组合产生响应。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/422&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;422 Unprocessable Entity&lt;/code&gt;&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Glossary/WebDAV&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebDAV&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;请求格式良好，但由于语义错误而无法遵循。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/423&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;423 Locked&lt;/code&gt;&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Glossary/WebDAV&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebDAV&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;正在访问的资源被锁定。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/424&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;424 Failed Dependency&lt;/code&gt;&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Glossary/WebDAV&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebDAV&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;由于先前的请求失败，所以此次请求失败。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/425&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;425 Too Early&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器不愿意冒着风险去处理可能重播的请求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/426&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;426 Upgrade Required&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器拒绝使用当前协议执行请求，但可能在客户机升级到其他协议后愿意这样做。 服务器在 426 响应中发送 &lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Upgrade (en-US)&lt;/a&gt; 头以指示所需的协议。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/428&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;428 Precondition Required&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原始服务器要求该请求是有条件的。 旨在防止“丢失更新”问题，即客户端获取资源状态，修改该状态并将其返回服务器，同时第三方修改服务器上的状态，从而导致冲突。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/429&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;429 Too Many Requests&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用户在给定的时间内发送了太多请求（“限制请求速率”）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/431&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;431 Request Header Fields Too Large&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器不愿意处理请求，因为它的 请求头字段太大（ Request Header Fields Too Large）。 请求可以在减小请求头字段的大小后重新提交。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/451&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;451 Unavailable For Legal Reasons&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用户请求非法资源，例如：由政府审查的网页。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;服务端响应httpsdevelopermozillaorgzh-cndocswebhttpstatus服务端响应&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status#%e6%9c%8d%e5%8a%a1%e7%ab%af%e5%93%8d%e5%ba%94&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;服务端响应&lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/500&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;500 Internal Server Error&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器遇到了不知道如何处理的情况。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/501&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;501 Not Implemented&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此请求方法不被服务器支持且无法被处理。只有&lt;code&gt;GET&lt;/code&gt;和&lt;code&gt;HEAD&lt;/code&gt;是要求服务器支持的，它们必定不会返回此错误代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/502&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;502 Bad Gateway&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此错误响应表明服务器作为网关需要得到一个处理这个请求的响应，但是得到一个错误的响应。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/503&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;503 Service Unavailable&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器没有准备好处理请求。 常见原因是服务器因维护或重载而停机。 请注意，与此响应一起，应发送解释问题的用户友好页面。 这个响应应该用于临时条件和 &lt;code&gt;Retry-After&lt;/code&gt;：如果可能的话，HTTP头应该包含恢复服务之前的估计时间。 网站管理员还必须注意与此响应一起发送的与缓存相关的标头，因为这些临时条件响应通常不应被缓存。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/504&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;504 Gateway Timeout&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;当服务器作为网关，不能及时得到响应时返回此错误代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/505&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;505 HTTP Version Not Supported&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器不支持请求中所使用的HTTP协议版本。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/506&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;506 Variant Also Negotiates&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器有一个内部配置错误：对请求的透明内容协商导致循环引用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/507&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;507 Insufficient Storage&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;服务器有内部配置错误：所选的变体资源被配置为参与透明内容协商本身，因此不是协商过程中的适当端点。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/508&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;508 Loop Detected&lt;/code&gt;&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Glossary/WebDAV&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebDAV&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;服务器在处理请求时检测到无限循环。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/510&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;510 Not Extended&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;客户端需要对请求进一步扩展，服务器才能实现它。服务器会回复客户端发出扩展请求所需的所有信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/511&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;511 Network Authentication Required&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;511 状态码指示客户端需要进行身份验证才能获得网络访问权限。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>ruby2.2 DevKit 安装后无法使用解决方案</title>
+        <link>https://52haowu.cn/p/ruby-devkit-install-failed/</link>
+        <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/ruby-devkit-install-failed/</guid>
+        <description>&lt;p&gt;windows 系统下，Ruby 的某些 gem 包需要 DevKit 才能正常安装，2.4 以后的版本可以一键安装 DevKit，之前的版本只能手动安装。&lt;/p&gt;
+&lt;p&gt;2.4 以后的可以到官网下载：&lt;a class=&#34;link&#34; href=&#34;https://rubyinstaller.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://rubyinstaller.org/downloads/&lt;/a&gt; 下载 &lt;strong&gt;WITH DEVKIT&lt;/strong&gt; 的版本即可。&lt;/p&gt;
+&lt;p&gt;我遇到安装后找不到 make 的情况，上网搜索后尝试的解决方案。&lt;/p&gt;
+&lt;p&gt;参考地址：&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/zxktxj/archive/2013/01/04/2843556.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cnblogs.com/zxktxj/archive/2013/01/04/2843556.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根据博文尝试后，在我这主要就是检查 devkit.rb 和 operating_system.rb 这两个文件里边的文件夹路径。&lt;/p&gt;
+&lt;p&gt;C:\Ruby22-x64\lib\ruby\site_ruby\devkit.rb&lt;/p&gt;
+&lt;p&gt;C:\Ruby22-x64\lib\ruby\2.2.0\rubygems\defaults\operating_system.rb&lt;/p&gt;
+&lt;p&gt;比如我的电脑上的 devkit.rb，有很明显的文件夹路径对不上：&amp;lsquo;D:\Program Files\DevKit\mingw\bin&amp;rsquo;，我的 DevKit 安装的位置压根就不是在这里。&lt;/p&gt;
+&lt;p&gt;可能是因为我系统里边的环境变量混乱导致的，把文件夹路径改对保存即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# enable RubyInstaller DevKit usage as a vendorable helper library&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;unless&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PATH&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;].&lt;/span&gt;include?(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;D:\\Program Files\\DevKit\\mingw\\bin&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  phrase &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Temporarily enhancing PATH to include DevKit...&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; defined?(&lt;span style=&#34;color:#66d9ef&#34;&gt;Gem&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;Gem&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ui&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;say(phrase) &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Gem&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;configuration&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;verbose
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    puts phrase
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  puts &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Prepending ENV[&amp;#39;PATH&amp;#39;] to include DevKit...&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; $DEBUG
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PATH&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;D:\\Program Files\\DevKit\\bin;D:\\Program Files\\DevKit\\mingw\\bin;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PATH&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;RI_DEVKIT&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;D:\\Program Files\\DevKit&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;CC&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gcc&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;CXX&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;g++&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;CPP&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;cpp&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;就这样解决了，一般情况下，如果 DevKit 正确安装但仍然不能用，那么上面这种方式就可以试试。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>PC 微信多开工具</title>
+        <link>https://52haowu.cn/p/pc-wechat-multi-run/</link>
+        <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/pc-wechat-multi-run/</guid>
+        <description>&lt;p&gt;PC 微信本身是不允许多开的，但是却有多开的方法。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;方法是：第一步，退出当前的微信；第二步，快速连续多次启动微信。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个人工操作还是有点难度，但是用脚本就简单多了。脚本代码如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@echo off
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo 请先退出微信 PC 客户端，再执行该程序！
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;start &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Program Files (x86)\Tencent\WeChat\WeChat.exe&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;start &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Program Files (x86)\Tencent\WeChat\WeChat.exe&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;保存脚本步骤：新建一个 .txt，把以上代码保存到 .txt 里边，然后把 .txt 修改为 .bat，双击就可以启动了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;代码执行流程：1，杀掉微信的进程；2，连续启动两次微信。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何三开乃至更多开？把 &lt;strong&gt;start&lt;/strong&gt; 这行代码多复制几行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注意：因为会杀进程，所以在使用脚本之前，你要先保证微信里边没有正在编辑的内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>JetBrains 迷你地图插件 CodeGlance</title>
+        <link>https://52haowu.cn/p/jetbrains-minimap-plugin/</link>
+        <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/jetbrains-minimap-plugin/</guid>
+        <description>&lt;p&gt;JetBrains 本身不带迷你地图功能，但可以通过插件的形式来实现。&lt;/p&gt;
+&lt;p&gt;直接在 Settings 里边搜索 CodeGlance，安装后重启 IDE 就有了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/jetbrains-minimap-plugin/001.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://52haowu.cn/images/jetbrains-minimap-plugin/002.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>RubyGem 下载失败的解决方法</title>
+        <link>https://52haowu.cn/p/ruby-gem-download-failed/</link>
+        <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/ruby-gem-download-failed/</guid>
+        <description>&lt;p&gt;RubyGem 下载 gem 包失败，有一定原因是 https 导致的。&lt;/p&gt;
+&lt;p&gt;搜索了很久，找到一个解决的方法。&lt;/p&gt;
+&lt;p&gt;1、下载 cacert.pem，也就是 curl 的证书。
+&lt;a class=&#34;link&#34; href=&#34;http://curl.haxx.se/ca/cacert.pem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://curl.haxx.se/ca/cacert.pem&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OpenSSL 使用 &lt;em&gt;PEM&lt;/em&gt; 文件格式存储证书和密钥。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2、放到指定版本 ruby 目录里边，我这里使用的是 2.2 的版本
+C:\Ruby22-x64\lib\ruby\2.2.0\rubygems\ssl_certs\&lt;/p&gt;
+&lt;p&gt;3、现在可以再试试&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

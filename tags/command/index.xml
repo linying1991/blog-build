@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Command on 我的工作记录</title>
+        <link>https://52haowu.cn/tags/command/</link>
+        <description>Recent content in Command on 我的工作记录</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 26 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://52haowu.cn/tags/command/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Explorer 命令行开关</title>
+        <link>https://52haowu.cn/p/explorer_command_line/</link>
+        <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://52haowu.cn/p/explorer_command_line/</guid>
+        <description>&lt;h1 id=&#34;介绍&#34;&gt;介绍
+&lt;/h1&gt;&lt;p&gt;说到 Explorer 的命令行，我自己用得比较多的，就下边几种情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开（弹出）文件夹&lt;/li&gt;
+&lt;li&gt;定位文件或文件夹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;例子&#34;&gt;例子
+&lt;/h1&gt;&lt;p&gt;本文主要介绍第 2 种情况的命令行用法。&lt;/p&gt;
+&lt;p&gt;命令开关比较简单，那就是 &lt;code&gt;/select,文件路径&lt;/code&gt;。文件路径即便包含空格，也可以不用加 &lt;code&gt;&amp;quot;&lt;/code&gt;。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;explorer.exe /select,&amp;#34;C:\Program Files&amp;#34;
+explorer.exe /select,C:\Program Files
+explorer.exe /select,C:\Windows\notepad.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;注意点&#34;&gt;注意点
+&lt;/h1&gt;&lt;p&gt;目录分割符必须用 &lt;code&gt;\&lt;/code&gt;，而不能用 &lt;code&gt;/&lt;/code&gt;，否则无法正常定位到文件。&lt;/p&gt;
+&lt;h1 id=&#34;更多知识点&#34;&gt;更多知识点
+&lt;/h1&gt;&lt;p&gt;还有其他我认为比较冷门的命令开关，有兴趣可进行了解。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ss64.com/nt/explorer.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;更多命令开关&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
